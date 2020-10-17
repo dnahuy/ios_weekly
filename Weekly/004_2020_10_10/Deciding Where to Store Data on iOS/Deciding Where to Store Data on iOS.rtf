@@ -1,0 +1,131 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-Roman;
+\f3\froman\fcharset0 Times-BoldItalic;\f4\froman\fcharset0 Times-Italic;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18460\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/better-programming/deciding-where-to-store-data-on-ios-3f71e5d850c8"}}{\fldrslt 
+\f0\fs36 \cf0 https://medium.com/better-programming/deciding-where-to-store-data-on-ios-3f71e5d850c8}}
+\f0\fs24 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f2\b0\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs36 \cf0 C\'f3 4 c\'e1ch \uc0\u273 \u7875  l\u432 u data tr\'ean iOS:\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}UserDefaults\
+{\listtext	\uc0\u8226 	}Files\
+{\listtext	\uc0\u8226 	}Keychain\
+{\listtext	\uc0\u8226 	}Databases \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 1. UserDefaults\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\b0\fs36 \cf0 \
+D\uc0\u7877  d\'f9ng nh\u7845 t, th\u432 \u7901 ng d\'f9ng \u273 \u7875  l\u432 u c\'e1c user preferences \u273 \u417 n gi\u7843 n ho\u7863 c l\u432 u c\'e1c gi\'e1 tr\u7883  \u273 \u417 n gi\u7843 n \u273 \u7875  improve UX.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3\i\b \cf0 Nh\uc0\u7919 ng th\u7913  n\'ean l\u432 u:
+\f2\i0\b0 \
+Gi\uc0\u7899 i h\u7841 n k\'edch th\u432 \u7899 c t\u7889 i \u273 a 1MB v\'e0 Apple khuy\'ean l\'e0 kh\'f4ng n\'ean v\u432 \u7907 t qu\'e1 512KB (con s\u7889  n\'e0y th\u7921 c s\u7921  Apple kh\'f4ng c\'f3 n\'eau trong documents).\
+ Dung l\uc0\u432 \u7907 ng n\'e0y c\u361 ng v\u7851 n l\'e0 r\u7845 t nhi\u7873 u \u273 \u7875  ch\u7881  l\u432 u data \u273 \u417 n gi\u7843 n nh\u432  c\'e1c primitive type.\
+\
+
+\f3\i\b Security:
+\f2\i0\b0 \
+Storage n\'e0y kh\'f4ng \uc0\u273 \u432 \u7907 c encrypted b\u7845 t c\u7913  g\'ec c\u7843 . Kh\'f4ng bao gi\u7901  l\u432 u sensitive data \u7903  UserDefaults.\
+\
+
+\f3\i\b C\'e1ch d\'f9ng:
+\f2\i0\b0 \
+Ch\'fang ta n\'ean t\uc0\u7921  t\u7841 o 
+\f4\i UserDefaults
+\f2\i0  c\uc0\u7911 a m\'ecnh thay v\'ec d\'f9ng c\'e1i c\'f3 s\u7861 n trong app. Gi\'fap d\u7877  thay \u273 \u7893 i c\'e1i 
+\f4\i UserDefaults
+\f2\i0  c\uc0\u7911 a ri\'eang m\'ecnh. \
+V\'ed d\uc0\u7909  trong 1 v\'e0i case ta c\'f3 th\u7875  \'93m\u7841 nh tay\'94 xo\'e1 s\u7841 ch UserDefaults \u273 \u432 \u7907 c t\u7841 o ri\'eang \u273 \'f3.\
+\uc0\u272 \u7885 c t\u7915  UserDefaults th\u7921 c s\u7921  nhanh v\'ec n\'f3 \u273 \u432 \u7907 c load v\'e0o memory khi app launch.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 2. Files\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\b0\fs36 \cf0 \
+C\'f3 th\uc0\u7875  l\u432 u data l\u7899 n nh\u432 ng s\u7869  ch\u7853 m\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3\i\b \cf0 Nh\uc0\u7919 ng th\u7913  n\'ean l\u432 u:
+\f2\i0\b0 \
+H\'ecnh, videos, file JSON l\uc0\u7899 n, c\'e1c documents m\'e0 user t\u7841 o ra nh\u432  text file, PDF.\
+\
+
+\f3\i\b Security:
+\f2\i0\b0 \
+Kh\'f4ng secure.\
+\
+
+\f3\i\b C\'e1ch d\'f9ng:
+\f2\i0\b0 \
+Ghi file xu\uc0\u7889 ng th\u432  m\u7909 c Documents ho\u7863 c th\u432  m\u7909 c Cache.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 3. Keychain\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\b0\fs36 \cf0 \
+L\uc0\u432 u sensitive data\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3\i\b \cf0 Nh\uc0\u7919 ng th\u7913  n\'ean l\u432 u:
+\f2\i0\b0 \
+Password, cert, token, v.v\'85\
+\
+
+\f3\i\b Security:
+\f2\i0\b0 \
+Secure. Tuy nhi\'ean, nh\uc0\u432  m\u7885 i th\u7913  \u7903  tr\'ean device, keychain v\u7851 n c\'f3 th\u7875  b\u7883  crack.\
+\
+
+\f3\i\b C\'e1ch d\'f9ng:
+\f2\i0\b0 \
+Kh\'f3 d\'f9ng n\'ean best option l\'e0 d\'f9ng c\'e1c third party nh\uc0\u432  KeychainAccess\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 4. Database\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\b0\fs36 \cf0 \
+Th\'edch h\uc0\u7907 p l\u432 u d\u7919  li\u7879 u l\u7899 n c\u7911 a c\'e1c data c\'f3 c\u7845 u tr\'fac. Kh\'f4ng ch\u7881  th\'edch h\u7907 p l\u432 u m\'e0 c\'f2n r\u7845 t th\'edch h\u7907 p trong vi\u7879 c search v\'e0 filter.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3\i\b \cf0 Nh\uc0\u7919 ng th\u7913  n\'ean l\u432 u:
+\f2\i0\b0 \
+Metadata c\uc0\u7911 a Documents m\'e0 user t\u7841 o ra trong App.\
+Weekly running exercises c\uc0\u7911 a user\
+To-do list c\uc0\u7911 a user.\
+\
+
+\f3\i\b Security:
+\f2\i0\b0 \
+Database th\uc0\u432 \u7901 ng \u273 \u432 \u7907 c l\u432 u \u7903  th\u432  m\u7909 c Documents. V\u7851 n kh\'f4ng n\'ean d\'f9ng \u273 \u7875  l\u432 u sensitve data.\
+\
+
+\f3\i\b C\'e1ch d\'f9ng:
+\f2\i0\b0 \
+SQL queries. L\uc0\u432 u \'fd: database th\u432 \u7901 ng kh\'f4ng thread-safe}
