@@ -1,0 +1,43 @@
+BCSymbolMap Version: 2.0
+Apple clang version 12.0.0 (clang-1200.0.32.2)
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk
+iPhoneOS14.0.sdk
+/Users/huydu/Library/Developer/Xcode/DerivedData/test_xcframework-dgujdcutxumjnogbngodhrfldnjm/Build/Intermediates.noindex/DependentBuilds/test_xcframework.build/Debug-iphoneos/test_xcframework.build/DerivedSources/test_xcframework_vers.c
+/Users/huydu/Desktop/document/Weekly/005_2020_10_17/How_to_make_XCFramework/Demo/test_xcframework
+_$s16test_xcframework16HuyDemoFrameworkV6param1SivM.resume.0
+_$s16test_xcframework16HuyDemoFrameworkVSiIetMAlYl_TC
+_$s16test_xcframework16HuyDemoFrameworkV6param2SivM.resume.0
+___swift_memcpy16_8
+___swift_noop_void_return
+_$s16test_xcframework16HuyDemoFrameworkVwet
+_$s16test_xcframework16HuyDemoFrameworkVwst
+_$s16test_xcframework16HuyDemoFrameworkVWV
+_$s16test_xcframeworkMXM
+_$s16test_xcframework16HuyDemoFrameworkVMf
+_symbolic _____ 16test_xcframework16HuyDemoFrameworkV
+_symbolic Si
+_$s16test_xcframework16HuyDemoFrameworkVMF
+__swift_FORCE_LOAD_$_swiftFoundation_$_test_xcframework
+__swift_FORCE_LOAD_$_swiftObjectiveC_$_test_xcframework
+__swift_FORCE_LOAD_$_swiftDarwin_$_test_xcframework
+__swift_FORCE_LOAD_$_swiftCoreFoundation_$_test_xcframework
+__swift_FORCE_LOAD_$_swiftDispatch_$_test_xcframework
+__swift_FORCE_LOAD_$_swiftCoreGraphics_$_test_xcframework
+___swift_reflection_version
+Apple clang version 12.0.0 (clang-1200.0.30.1)
+<swift-imported-modules>
+Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+/Users/huydu/Desktop/document/Weekly/005_2020_10_17/How_to_make_XCFramework/Demo/test_xcframework/test_xcframework/test.swift
+$s16test_xcframework16HuyDemoFrameworkVMa
+<compiler-generated>
+$s16test_xcframework16HuyDemoFrameworkVwst
+$s16test_xcframework16HuyDemoFrameworkVwet
+__swift_noop_void_return
+__swift_memcpy16_8
+init
+param2.modify
+param2.set
+param2.get
+param1.modify
+param1.set
+param1.get
