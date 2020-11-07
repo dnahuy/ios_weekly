@@ -1,0 +1,198 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fnil\fcharset0 Monaco;
+\f3\fmodern\fcharset0 Courier;\f4\fnil\fcharset0 HelveticaNeue;\f5\fnil\fcharset0 HelveticaNeue-Medium;
+}
+{\colortbl;\red255\green255\blue255;\red183\green111\blue179;\red255\green255\blue255;\red0\green0\blue0;
+\red202\green202\blue202;\red67\green192\blue160;\red70\green137\blue204;\red212\green214\blue154;\red23\green23\blue23;
+\red167\green197\blue152;\red89\green138\blue67;\red185\green188\blue186;\red0\green0\blue0;\red0\green0\blue0;
+\red194\green126\blue101;\red140\green211\blue254;\red255\green255\blue255;\red185\green188\blue186;}
+{\*\expandedcolortbl;;\cssrgb\c77255\c52549\c75294;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;
+\cssrgb\c83137\c83137\c83137;\cssrgb\c30588\c78824\c69020;\cssrgb\c33725\c61176\c83922;\cssrgb\c86275\c86275\c66667;\cssrgb\c11765\c11765\c11765;
+\cssrgb\c70980\c80784\c65882;\cssrgb\c41569\c60000\c33333;\cssrgb\c77255\c78431\c77647;\cssrgb\c0\c0\c0\c80000;\cssrgb\c0\c0\c0\c1961;
+\cssrgb\c80784\c56863\c47059;\cssrgb\c61176\c86275\c99608;\cssrgb\c100000\c100000\c100000;\cssrgb\c77255\c78431\c77647;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww37900\viewh18760\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://peterfriese.dev/ultimate-guide-to-swiftui2-application-lifecycle/"}}{\fldrslt 
+\f0\fs36 \cf0 https://peterfriese.dev/ultimate-guide-to-swiftui2-application-lifecycle/}}
+\f0\fs24 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs36 \cf0 Gi\uc0\u7899 i thi\u7879 u v\u7873  App Lifeycle m\u7899 i \u273 \u432 \u7907 c d\'f9ng trong SwiftUI 2\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 1. Entry Point
+\f0\b0\fs24 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\cb4 import\cf5 \strokec5  \cf6 \strokec6 SwiftUI\cf5 \strokec5 \
+\
+\cf7 \strokec7 @main\cf5 \strokec5 \
+\cf7 \strokec7 struct\cf5 \strokec5  \cf6 \strokec6 SwiftUIAppLifeCycleApp\cf5 \strokec5 : App \{\
+  \cf7 \strokec7 var\cf5 \strokec5  body: some Scene \{\
+    WindowGroup \{\
+      \cf8 \strokec8 ContentView\cf5 \strokec5 ()\
+    \}\
+  \}\
+\}
+\f3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf7 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 @available\cf5 \strokec5 (\cf7 \strokec7 iOS\cf5 \strokec5  \cf10 \strokec10 14.0\cf5 \strokec5 , \cf7 \strokec7 macOS\cf5 \strokec5  \cf10 \strokec10 11.0\cf5 \strokec5 , \cf7 \strokec7 tvOS\cf5 \strokec5  \cf10 \strokec10 14.0\cf5 \strokec5 , \cf7 \strokec7 watchOS\cf5 \strokec5  \cf10 \strokec10 7.0\cf5 \strokec5 , \cf7 \strokec7 *\cf5 \strokec5 )\
+\cf7 \strokec7 extension\cf5 \strokec5  \cf6 \strokec6 App\cf5 \strokec5  \{\
+\
+    \cf11 \strokec11 /// Initializes and runs the app.\cf5 \strokec5 \
+    \cf11 \strokec11 ///\cf5 \strokec5 \
+    \cf11 \strokec11 /// If you precede your ``SwiftUI/App`` conformer's declaration with the\cf5 \strokec5 \
+    \cf11 \strokec11 /// [@main](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#ID626)\cf5 \strokec5 \
+    \cf11 \strokec11 /// attribute, the system calls the conformer's `main()` method to launch\cf5 \strokec5 \
+    \cf11 \strokec11 /// the app. SwiftUI provides a\cf5 \strokec5 \
+    \cf11 \strokec11 /// default implementation of the method that manages the launch process in\cf5 \strokec5 \
+    \cf11 \strokec11 /// a platform-appropriate way.\cf5 \strokec5 \
+    \cf7 \strokec7 public\cf5 \strokec5  \cf7 \strokec7 static\cf5 \strokec5  \cf7 \strokec7 func\cf5 \strokec5  \cf8 \strokec8 main\cf5 \strokec5 ()\
+\}
+\f3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf4 2. 
+\f2\b0\fs40 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec12 \shad\shadx0\shady-20\shadr0\shado77 \shadc0 application(_:didFinishLaunchingWithOptions:)
+\f4 \strokec13 \shad0 \'a0\cf13 \cb14 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf7 \cb9 \strokec7 @main\cf5 \strokec5 \
+\cf7 \strokec7 struct\cf5 \strokec5  \cf6 \strokec6 ColorsApp\cf5 \strokec5 : App \{\
+  \cf7 \strokec7 init\cf5 \strokec5 () \{\
+    \cf8 \strokec8 print\cf5 \strokec5 (\cf15 \strokec15 "Colors application is starting up. App initialiser."\cf5 \strokec5 )\
+  \}\
+  \
+  \cf7 \strokec7 var\cf5 \strokec5  body: some Scene \{\
+    WindowGroup \{\
+      \cf8 \strokec8 ContentView\cf5 \strokec5 ()\
+    \}\
+\}
+\f3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs36 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf4 3.\cb3  
+\f2\b0\fs40 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec12 applicationDidBecomeActive, 
+\f4 \cf4 \outl0\strokewidth0 \'a0
+\f2 \cf4 \outl0\strokewidth0 \strokec12 applicationWillResignActive, applicationDidEnterBackground\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf7 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 @main\cf5 \strokec5 \
+\cf7 \strokec7 struct\cf5 \strokec5  \cf6 \strokec6 SwiftUIAppLifeCycleApp\cf5 \strokec5 : App \{\
+  \cf7 \strokec7 @Environment\cf5 \strokec5 (\\.\cf16 \strokec16 scenePhase\cf5 \strokec5 ) \cf7 \strokec7 var\cf5 \strokec5  scenePhase\
+  \
+  \cf7 \strokec7 var\cf5 \strokec5  body: some Scene \{\
+    WindowGroup \{\
+      \cf8 \strokec8 ContentView\cf5 \strokec5 ()\
+    \}\
+    .\cf8 \strokec8 onChange\cf5 \strokec5 (\cf8 \strokec8 of\cf5 \strokec5 : scenePhase) \{ newScenePhase \cf2 \strokec2 in\cf5 \strokec5 \
+      \cf2 \strokec2 switch\cf5 \strokec5  newScenePhase \{\
+      \cf2 \strokec2 case\cf5 \strokec5  .\cf16 \strokec16 active\cf5 \strokec5 :\
+        \cf8 \strokec8 print\cf5 \strokec5 (\cf15 \strokec15 "App is active"\cf5 \strokec5 )\
+      \cf2 \strokec2 case\cf5 \strokec5  .\cf16 \strokec16 inactive\cf5 \strokec5 :\
+        \cf8 \strokec8 print\cf5 \strokec5 (\cf15 \strokec15 "App is inactive"\cf5 \strokec5 )\
+      \cf2 \strokec2 case\cf5 \strokec5  .\cf16 \strokec16 background\cf5 \strokec5 :\
+        \cf8 \strokec8 print\cf5 \strokec5 (\cf15 \strokec15 "App is in background"\cf5 \strokec5 )\
+      \cf7 \strokec7 @unknown\cf5 \strokec5  \cf2 \strokec2 default\cf5 \strokec5 :\
+        \cf8 \strokec8 print\cf5 \strokec5 (\cf15 \strokec15 "Oh - interesting: I received an unexpected new value."\cf5 \strokec5 )\
+      \}\
+    \}\
+  \}\
+\}
+\f3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf4 3.\cf4 \cb17  \cf13 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Handling deep links
+\f5\b0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\fs40 \cf4 \cb17 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf7 \cb9 \outl0\strokewidth0 \strokec7 @main\cf5 \strokec5 \
+\cf7 \strokec7 struct\cf5 \strokec5  \cf6 \strokec6 SwiftUIAppLifeCycleApp\cf5 \strokec5 : App \{\
+  \cf7 \strokec7 var\cf5 \strokec5  body: some Scene \{\
+    WindowGroup \{\
+      \cf8 \strokec8 ContentView\cf5 \strokec5 ()\
+        .\cf16 \strokec16 onOpenURL\cf5 \strokec5  \{ url \cf2 \strokec2 in\cf5 \strokec5 \
+          \cf8 \strokec8 print\cf5 \strokec5 (\cf15 \strokec15 "Received URL: \cf7 \strokec7 \\(\cf5 \strokec5 url\cf7 \strokec7 )\cf15 \strokec15 "\cf5 \strokec5 )\
+        \}\
+    \}\
+  \}\
+\}
+\f3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 4. Using Old AppDelegate
+\f0\b0\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs36 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf7 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 class\cf5 \strokec5  \cf6 \strokec6 AppDelegate\cf5 \strokec5 : NSObject, UIApplicationDelegate \{\
+  \cf7 \strokec7 func\cf5 \strokec5  \cf8 \strokec8 application\cf5 \strokec5 (\cf8 \strokec8 _\cf5 \strokec5  \cf16 \strokec16 application\cf5 \strokec5 : UIApplication,\
+                   \cf8 \strokec8 didFinishLaunchingWithOptions\cf5 \strokec5  \cf16 \strokec16 launchOptions\cf5 \strokec5 : [UIApplication.LaunchOptionsKey : \cf6 \strokec6 Any\cf5 \strokec5 ]? = \cf7 \strokec7 nil\cf5 \strokec5 ) -> \cf6 \strokec6 Bool\cf5 \strokec5  \{\
+    \cf8 \strokec8 print\cf5 \strokec5 (\cf15 \strokec15 "Colors application is starting up. ApplicationDelegate didFinishLaunchingWithOptions."\cf5 \strokec5 )\
+    \cf2 \strokec2 return\cf5 \strokec5  \cf7 \strokec7 true\cf5 \strokec5 \
+  \}\
+\}\
+\
+\cf7 \strokec7 @main\cf5 \strokec5 \
+\cf7 \strokec7 struct\cf5 \strokec5  \cf6 \strokec6 ColorsApp\cf5 \strokec5 : App \{\
+  \cf7 \strokec7 @UIApplicationDelegateAdaptor\cf5 \strokec5 (AppDelegate.self) \cf7 \strokec7 var\cf5 \strokec5  delegate\
+  \
+  \cf7 \strokec7 var\cf5 \strokec5  body: some Scene \{\
+    WindowGroup \{\
+      \cf8 \strokec8 ContentView\cf5 \strokec5 ()\
+    \}\
+  \}\
+\}
+\f3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\
+}
