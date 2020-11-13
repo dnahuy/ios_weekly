@@ -1,0 +1,124 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\froman\fcharset0 Times-Italic;\f4\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red255\green255\blue255;\red0\green0\blue0;
+\red11\green79\blue121;\red92\green38\blue153;\red15\green104\blue160;\red63\green110\blue116;\red196\green26\blue22;
+\red38\green71\blue75;\red15\green114\blue113;\red255\green255\blue255;\red14\green14\blue14;\red152\green0\blue3;
+\red152\green66\blue3;\red228\green0\blue10;\red253\green151\blue154;}
+{\*\expandedcolortbl;;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0;
+\csgenericrgb\c4314\c30980\c47451;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c5882\c40784\c62745;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c77000\c10200\c8600;
+\csgenericrgb\c14900\c27800\c29400;\cssrgb\c784\c51765\c51765;\cssrgb\c100000\c100000\c100000;\cssrgb\c6667\c6667\c6667;\cssrgb\c66667\c0\c0;
+\cssrgb\c66667\c33333\c0;\cssrgb\c92549\c1961\c1961;\cssrgb\c100000\c66667\c66667;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww37900\viewh18720\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://fivestars.blog/swiftui/design-system-composing-views.html"}}{\fldrslt 
+\f0\fs36 \cf0 https://fivestars.blog/swiftui/design-system-composing-views.html}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t m\'f4 t\u7843  v\u7873  qu\'e1 tr\'ecnh t\'e1c gi\u7843  ph\'e1t tri\u7875 n 1 SwiftUI TextView t\u259 ng tr\u432 \u7903 ng d\u7847 n d\u7847 n.\
+\
+
+\f1\b\fs44 1. Ban \uc0\u273 \u7847 u
+\f0\b0\fs36 \
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 struct\cf4  \cf5 FSTextField\cf4 : \cf6 View\cf4  \{\
+    ....\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+D\uc0\u7921 a v\'e0o design ban \u273 \u7847 u, t\'e1c gi\u7843  define ra \u273 \u432 \u7907 c 1 TextView tho\u7843  \u273 \'fang v\u7899 i requirement c\u7911 a Designer.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 2. C\'e1c thay \uc0\u273 \u7893 i\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 Theo th\uc0\u7901 i gian d\u7847 n d\u7847 n design c\u7911 a TextView c\'e0ng ng\'e0y c\'e0ng thay \u273 \u7893 i, t\'e1c gi\u7843  tr\'ecnh b\'e0y c\'e1c c\'e1ch \u273 \u7875  \'93compose\'94 design m\u7899 i t\u7915  TextView ban \u273 \u7847 u.\
+V\'ed d\uc0\u7909 :\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 struct\cf4  \cf5 _FSTextField\cf4 : \cf6 View\cf4  \{\
+    ....\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+TextView ban \uc0\u273 \u7847 u gi\u7901  tr\u7903  th\'e0nh Core Component\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 3. Generic text fields: Composable Views
+\f0\b0\fs36 \
+TextView ban \uc0\u273 \u7847 u gi\u7901  tr\u7903  th\'e0nh Core Component\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 struct\cf4  \cf5 FSTextField\cf4 <\cf5 TopContent\cf4 : \cf6 View\cf4 >: \cf6 View\cf4  \{\
+  \cf2 var\cf4  \cf7 topContent\cf4 : \cf8 TopContent\cf4 \
+\
+  \cf2 init\cf4 (\
+    placeholder: \cf6 LocalizedStringKey\cf4  = \cf9 ""\cf4 ,\
+    text: \cf6 Binding\cf4 <\cf6 String\cf4 >,\
+    appearance: \cf8 Appearance\cf4  = .\cf10 default\cf4 ,\
+    @\cf6 ViewBuilder\cf4  topContent: () -> \cf8 TopContent\cf4 \
+  ) \{\
+    \cf2 self\cf4 .\cf8 topContent\cf4  = topContent()\
+  \}\
+\
+  \cf2 var\cf4  \cf7 body\cf4 : \cf2 some\cf4  \cf6 View\cf4  \{\
+    VStack \{\
+      topContent\
+      _FSTextField(\
+        placeholder: placeholder,\
+        text: $text,\
+        borderColor: borderColor\
+      )\
+    \}\
+  \}\
+\}\
+\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf4 T\'e1c gi\uc0\u7843  tr\'ecnh b\'e0y 1 c\'e1ch t\u7841 o 1 TextField m\u7899 i b\u7857 ng c\'e1ch \'93b\u7885 c\'94 cho 
+\f3\i CoreComponent
+\f0\i0  (
+\f3\i _FSTextField
+\f0\i0 ) th\'eam 1 
+\f3\i TopContent
+\f0\i0  (
+\f3\i ViewBuilder
+\f0\i0 ).\
+Ngo\'e0i c\'e1ch tr\'ean ta c\'f3 th\uc0\u7875  c\'f3 r\u7845 t nhi\u7873 u c\'e1ch custom kh\'e1c nhau \u273 \u7889 i 
+\f3\i CoreComponent
+\f0\i0 .\
+1 v\'ed d\uc0\u7909  cho vi\u7879 c s\u7917  d\u7909 ng 
+\f3\i FSTextField
+\f0\i0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs30 \cf11 \cb12 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec11 FSTextField\cf13 \strokec13 (\
+  \cf14 \strokec14 placeholder\cf13 \strokec13 : \cf15 \strokec15 "Placeholder"\cf13 \strokec13 ,\
+  \cf14 \strokec14 text\cf13 \strokec13 : \cf16 \cb17 \strokec16 $\cf13 \cb12 \strokec13 myText\
+) \{\
+  \cf11 \strokec11 EmptyView\cf13 \strokec13 ()\
+\}\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\
+\
+}
