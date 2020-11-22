@@ -1,0 +1,65 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fswiss\fcharset0 Helvetica;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red255\green255\blue255;\red0\green0\blue0;
+\red92\green38\blue153;\red196\green26\blue22;\red28\green0\blue207;\red46\green13\blue110;\red15\green104\blue160;
+\red63\green110\blue116;\red31\green31\blue31;\red239\green239\blue239;}
+{\*\expandedcolortbl;;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0;
+\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c5882\c40784\c62745;
+\csgenericrgb\c24700\c43100\c45600;\cssrgb\c16078\c16078\c16078;\cssrgb\c94902\c94902\c94902;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww37900\viewh18720\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/better-programming/use-custom-font-with-dynamic-type-in-ios-apps-aeda0b314b12"}}{\fldrslt 
+\f0\fs36 \cf0 https://medium.com/better-programming/use-custom-font-with-dynamic-type-in-ios-apps-aeda0b314b12}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t h\u432 \u7899 ng d\u7851 n c\'e1ch d\'f9ng Dynamic Type cho Custom Font.\
+\
+
+\f1\b\fs44 1. Add custom font
+\f0\b0\fs36 \
+H\uc0\u7895  tr\u7907  True Type Font (.ttf) v\'e0 Open Type Font (.otf)\
+\
+
+\f1\b\fs44 2. S\uc0\u7917  d\u7909 ng custom font v\u7899 i Dynamic Type
+\f0\b0\fs36 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic 0_WvKbSMZyXeSgIkeT.png \width14000 \height10140 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \
+\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f3\fs32 \cf2 \cb3 guard\cf4  \cf2 let\cf4  font = \cf5 UIFont\cf4 (name: \cf6 "Proxima Nova-Regular"\cf4 , size: \cf7 34\cf4 ) \cf2 else\cf4  \{\
+    \cf8 fatalError\cf4 (\cf6 "Can't find the custom font"\cf4 )\
+\}\
+\cf2 let\cf4  \cf9 fontMetrics\cf4  = \cf5 UIFontMetrics\cf4 (forTextStyle: .\cf5 largeTitle\cf4 )\
+label.font = \cf10 fontMetrics\cf4 .scaledFont(for: font)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 3. Update khi text size change\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f3\fs32 \cf11 \cb12 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec11 label.adjustsFontForContentSizeCategory = true\cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+}

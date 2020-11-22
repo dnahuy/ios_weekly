@@ -1,0 +1,118 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red255\green255\blue255;\red0\green0\blue0;
+\red92\green38\blue153;\red15\green104\blue160;\red46\green13\blue110;\red196\green26\blue22;\red28\green0\blue207;
+\red31\green31\blue31;\red239\green239\blue239;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0;
+\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c5882\c40784\c62745;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c11000\c0\c81000;
+\cssrgb\c16078\c16078\c16078;\cssrgb\c94902\c94902\c94902;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33100\viewh18120\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/better-programming/launch-screens-in-xcode-all-the-options-explained-7a7a7992f535"}}{\fldrslt 
+\f0\fs36 \cf0 https://medium.com/better-programming/launch-screens-in-xcode-all-the-options-explained-7a7a7992f535}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t gi\u7899 i thi\u7879 u v\u7873  l\u7883 ch s\u7917  ph\'e1t tri\u7875 n c\u7911 a LaunchScreen v\'e0 c\'e1c options hi\u7879 n t\u7841 i \u273 \u7875  custom LaunchScreen\
+LaunchScreen xu\uc0\u7845 t hi\u7879 n khi start app v\'e0 gi\'fap cho user c\u7843 m th\u7845 y r\u7857 ng app nhanh v\'e0 responsive.\
+\
+
+\f1\b\fs44 1. L\uc0\u7883 ch s\u7917  c\u7911 a LaunchScreen
+\f0\b0\fs36 \
+Tr\uc0\u432 \u7899 c iOS 6, option duy nh\u7845 t l\'e0 d\'f9ng static image trong asset catalog. iOS 8 \u273 i c\'f9ng v\u7899 i XCode 6 cho ph\'e9p d\'f9ng storyboard thay v\'ec static image. Tuy nhi\'ean vi\u7879 c dynamic custom LaunchScreen v\u7851 n l\'e0 kh\'f4ng th\u7875  v\'e0 LaunchScreen b\u7883  cache r\u7845 t l\'e2u.\
+XCode 12 v\'e0 iOS 14 \uc0\u273 \'e3 improve LaunScreen.\
+\
+
+\f1\b\fs44 2. Guidelines
+\f0\b0\fs36 \
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}H\uc0\u7841 n ch\u7871  d\'f9ng text v\'ec localization kh\'f4ng \u273 \u432 \u7907 c.\
+{\listtext	\uc0\u8226 	}B\uc0\u7845 t c\u7917  \u7843 nh n\'e0o \u273 \u432 \u7907 c d\'f9ng c\u361 ng n\'ean scale well tr\'ean nh\u7919 ng device size kh\'e1c nhau.\
+{\listtext	\uc0\u8226 	}LaunchScreen n\'ean gi\uc0\u7889 ng nh\u7845 t c\'f3 th\u7875  v\u7899 i first screen c\u7911 a app.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 3. Clear cache trong qu\'e1 tr\'ecnh dev\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 Tr\uc0\u432 \u7899 c \u273 \'e2y, trong qu\'e1 tr\'ecnh dev ch\'fang ta th\u432 \u7901 ng g\u7863 p t\'ecnh tr\u7841 ng \u273 \'e3 ch\u7881 nh s\u7917 a LaunchScreen storyboard r\u7891 i nh\u432 ng n\'f3 kh\'f4ng \u273 \u432 \u7907 c update. Nguy\'ean nh\'e2n l\'e0 do iOS cache c\'e1c loading views nh\u432  image \u273 \u7875  t\u259 ng performance.\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}Clean build folder\
+{\listtext	\uc0\u8226 	}Remove app v\'e0 reinstall\
+{\listtext	\uc0\u8226 	}Reset simulator\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Ngo\'e0i ra c\'f2n c\'f3 1 trick nh\uc0\u7887  \u273 \'e3 \u273 \u432 \u7907 c test tr\'ean iOS 13\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 public\cf4  \cf2 extension\cf4  \cf5 UIApplication\cf4  \{\
+\
+    \cf2 func\cf4  \cf6 clearLaunchScreenCache\cf4 () \{\
+        \cf2 do\cf4  \{\
+            \cf2 try\cf4  \cf5 FileManager\cf4 .\cf5 default\cf4 .\cf7 removeItem\cf4 (atPath: \cf7 NSHomeDirectory\cf4 ()\cf7 +\cf8 "/Library/SplashBoard"\cf4 )\
+        \} \cf2 catch\cf4  \{\
+            \cf7 print\cf4 (\cf8 "Failed to delete launch screen cache: \cf4 \\(error)\cf8 "\cf4 )\
+        \}\
+    \}\
+\}
+\f0\fs36 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 3. Add sleep \uc0\u273 \u7875  delay app launch\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 \uc0\u272 \'f4i khi launch screen ch\u7881  hi\u7879 n l\'ean ch\u7899 p nho\'e1ng l\'e0 app \u273 \'e3 launch xong first screen. \u272 i\u7873 u n\'e0y khi\u7871 n ta kh\'f3 ki\u7875 m tra xem launch screen \u273 \'e3 hi\u7879 n \u273 \'fang hay ch\u432 a. Ta c\'f3 th\u7875  config th\'eam cho ri\'eang m\'f4i tr\u432 \u7901 ng debug \u273 \u7875  delay app launch.\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 func\cf4  \cf6 application\cf4 (\cf2 _\cf4  application: \cf5 UIApplication\cf4 , didFinishLaunchingWithOptions launchOptions: [\cf5 UIApplication\cf4 .\cf5 LaunchOptionsKey\cf4 : \cf2 Any\cf4 ]?) -> \cf5 Bool\cf4  \{\
+    \cf2 try\cf4 ! \cf5 FileManager\cf4 .\cf5 default\cf4 .\cf7 removeItem\cf4 (atPath: \cf7 NSHomeDirectory\cf4 ()\cf7 +\cf8 "/Library/SplashBoard"\cf4 )\
+\
+    \cf2 do\cf4  \{\
+        \cf7 sleep\cf4 (\cf9 2\cf4 )\
+    \}\
+\
+    \cf2 return\cf4  \cf2 true\cf4 \
+\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 \cb1 4. S\uc0\u7917  d\u7909 ng Storyboard\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 5. S\uc0\u7917  d\u7909 ng plist config
+\f0\b0\fs36 \
+Trong t\uc0\u432 \u417 ng lai s\u7869  thay th\u7871  cho vi\u7879 c d\'f9ng storyboard khi SwiftUI \u273 \'e3 thay th\u7871  cho storyboard v\'e0 UIKit.\
+Remove key 
+\f2\fs31\fsmilli15750 \cf10 \cb11 \expnd0\expndtw0\kerning0
+UILaunchStoryboardName\cf12 \cb13 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf12 \kerning1\expnd0\expndtw0 Th\'eam key 
+\f2\fs31\fsmilli15750 \cf10 \cb11 \expnd0\expndtw0\kerning0
+UILaunchScreen
+\f0\fs36 \cb13 . Trong Dictionary n\'e0y, ta c\'f3 th\uc0\u7875  set background image v\'e0 color. C\u7843  2 \u273 \u432 \u7907 c configure trong assets catalog\cf12 \kerning1\expnd0\expndtw0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 \cb1 6. Configure launch screen theo URL scheme\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 Option m\uc0\u7899 i trong XCode 12, cho ph\'e9p configure loading screen kh\'e1c nhau theo t\u7915 ng URL scheme deep link (Custom URL Scheme).\
+Trong info plist ch\'fang ta c\'f3 th\uc0\u7875  configure 1 default launch screen v\'e0 alternative launch screen cho URL m\'e0 ta mu\u7889 n custom ri\'eang.\
+}
