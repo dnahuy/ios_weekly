@@ -1,0 +1,74 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-Italic;
+\f3\froman\fcharset0 Times-BoldItalic;\f4\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red70\green60\blue60;\red70\green60\blue60;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c34510\c30196\c30196;\cssrgb\c34510\c30196\c30196;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww37900\viewh18580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://tclementdev.com/posts/what_went_wrong_with_the_libdispatch.html"}}{\fldrslt 
+\f0\fs36 \cf0 https://tclementdev.com/posts/what_went_wrong_with_the_libdispatch.html}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t n\'e0y chia s\u7867  c\'e1c nghi\'ean c\u7913 u v\'e0 tr\u7843 i nghi\u7879 m c\u7911 a t\'e1c gi\u7843  v\u7873  libdispatch (Grand Central Dispatch). Nh\uc0\u7919 ng kinh nghi\u7879 m v\'e0 nh\u7919 ng \u273 i\u7873 u r\'fat ra \u273 \u432 \u7907 c th\u7921 c s\u7921  r\u7845 t \u273 \'e1ng gi\'e1. \u272 \'e2y l\'e0 1 b\'e0i blog th\u7921 c s\u7921  ch\u7845 t l\u432 \u7907 ng.\
+\
+
+\f1\b\fs44 Good Times
+\f0\b0\fs36 \
+libdispatch \uc0\u273 \u432 \u7907 c Apple gi\u7899 i thi\u7879 u t\u7841 i WWDC 2008 v\'e0 t\'e1c gi\u7843  khi \u273 \'f3 \u273 \'e3 r\u7845 t th\'edch th\'fa. Libdispatch c\'f9ng v\u7899 i inline block syntax gi\'fap cho vi\u7879 c th\u7921 c hi\u7879 n multithread r\u7845 t d\u7877  d\'e0ng v\'e0 gi\'fap t\u7853 n d\u7909 ng s\u7913 c m\u7841 nh c\u7911 a c\'e1c multicore machine.\
+V\'e0o giai \uc0\u273 o\u7841 n 2000-2008, c\'e1c developer ch\u7881  start multithread khi b\u7855 t bu\u7897 c ph\u7843 i th\u7871  (v\'ed d\u7909  1 long-running task l\'e0m ch\u7853 m UI).\
+Apple \uc0\u273 \u432 a ra kh\'e1i ni\u7879 m v\u7873  queue v\'e0 b\u7843 o c\'e1c developer r\u7857 ng t\u7915  gi\u7901  n\'ean ng\u7915 ng suy ngh\u297  v\u7873  thread m\'e0 h\'e3y suy ngh\u297  v\u7873  queue. Ch\'fang ta ch\u7881  c\u7847 n submit task s\u7869  \u273 \u432 \u7907 c th\u7921 c hi\u7879 n tu\u7847 n t\u7921  ho\u7863 c \u273 \u7891 ng th\u7901 i v\'e0 libdispatch s\u7869  lo ph\u7847 n c\'f2n l\u7841 i.\
+N\'f3 s\uc0\u7869  t\u7921  \u273 \u7897 ng scale d\u7921 a tr\'ean available hardware. Queue r\u7845 t r\u7867  v\'e0 k\u7929  s\u432  Apple t\u7841 i WWDC \u273 \'f3 c\u361 ng t\u7915 ng n\'f3i r\u7857 ng ch\'fang ta c\'f3 th\u7875  c\'f3 h\'e0ng ng\'e0n queue.\
+\pard\pardeftab720\partightenfactor0
+
+\f2\i \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 "islands of serialization in a sea of concurrency\'94: 
+\f0\i0 m\uc0\u7895 i program component c\u7847 n thread safety s\u7869  c\'f3 1 private serial queue c\u7911 a ri\'eang n\'f3 v\'e0 gi\u7919 a c\'e1c components v\u7899 i nhau th\'ec d\'f9ng concurrent queues.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 Bad Times
+\f2\i\b0\fs36 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3  
+\f0\i0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Tuy nhi\'ean, m\uc0\u7885 i chuy\u7879 n th\u7921 c s\u7921  kh\'f4ng t\u7889 t nh\u432  Apple \u273 \'e3 tuy\'ean b\u7889 . T\'e1c gi\u7843  g\u7863 p v\u7845 n \u273 \u7873  v\u7899 i thread explosion v\'e0 t\'e1c gi\u7843  \u273 \'e3 r\u7845 t ng\u7841 c nhi\'ean v\'ec \u273 \'e1ng l\u7869  libdispatch ph\u7843 i t\u7921  \u273 \u7897 ng scale d\u7921 a tr\'ean available hardware.\
+\uc0\u272 \'e1ng l\u7869  s\u7889  l\u432 \u7907 ng thread ph\u7843 i h\u417 n k\'e9m ch\'fat \'edt so v\u7899 i s\u7889  l\u432 \u7907 ng core c\u7911 a m\'e1y.\
+T\'e1c gi\uc0\u7843  \u273 \'e3 email cho Apple v\'e0 nh\u7853 n \u273 \u432 \u7907 c tr\u7843  l\u7901 i l\'e0 h\'e3y remove ho\'e0n to\'e0n synchronization point v\'e0 chuy\u7875 n ho\'e0n to\'e0n sang async.\
+S\uc0\u7921  vi\u7879 c b\u7855 t \u273 \u7847 u ng\'e0y c\'e0ng tr\u7903  n\'ean t\u7879  h\u417 n v\'ec 1 h\'e0m g\u7885 i 1 h\'e0m async s\u7869  kh\'f4ng th\u7875  n\'e0o return k\u7871 t qu\u7843  m\'e0 kh\'f4ng async ch\'ednh n\'f3 (gi\u7889 ng nh\u432  completion block) n\'ean \u273 \'e3 g\'e2y ra to\'e0n b\u7897  chain ph\u7843 i chuy\u7875 n sang async.\
+B\uc0\u7855 t \u273 \u7847 u c\'f3 nh\u7919 ng h\'e0m ho\'e0n to\'e0n kh\'f4ng c\'f3 \'fd ngh\u297 a g\'ec \u273 \u7875  ph\u7843 i g\u7885 i n\'f3 theo ki\u7875 u async v\'e0 vi\u7879 c async qu\'e1 nhi\u7873 u g\'e2y ra nhi\u7873 u v\u7845 n \u273 \u7873  kh\'e1c n\u7919 a nh\u432  heavy callback designers, code kh\'f3 \u273 \u7885 c.\
+\uc0\u272 i\u7873 u t\u7879  nh\u7845 t ch\'ednh l\'e0 n\'f3 l\'e0m \u7843 nh h\u432 \u7903 ng \u273 \u7871 n performance, vi\u7879 c c\'f3 qu\'e1 nhi\u7873 u async small task v\'e0 \u273 \u432 \u7907 c li\'ean t\u7909 c dispatch l\'ean c\'e1c queue s\u7869  g\'e2y ra r\u7845 t nhi\u7873 u l\'e3ng ph\'ed resource.\
+Cu\uc0\u7889 i c\'f9ng sau khi \u273 \'e3 chuy\u7875 n sang async r\u7891 i t\'e1c gi\u7843  v\u7851 n th\u7845 y r\u7857 ng trong \u273 i\u7873 u ki\u7879 n b\'ecnh th\u432 \u7901 ng v\u7851 n c\'f2n 40 - 60 thread \u273 \u432 \u7907 c running tr\'ean 1 m\'e1y 4 core.\
+M\uc0\u7897 t k\u7929  s\u432  c\u7911 a Apple c\u361 ng \u273 \'e3 ti\u7871 t l\u7897  r\u7857 ng trong iOS 12, c\'e1c deamons c\'f3 performance t\u7889 t nh\u7845 t l\u7841 i l\'e0 nh\u7919 ng c\'e1i ch\u7841 y single-threaded.\
+\pard\pardeftab720\partightenfactor0
+
+\f3\i\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 "strongly consider not writing async/concurrent code"
+\f4\i0\b0\fs30 \cf3 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 Interlude
+\f2\i\b0\fs36 \cf2 \expnd0\expndtw0\kerning0
+ \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \kerning1\expnd0\expndtw0 libdispatch v\uc0\u7851 n r\u7845 t h\u7919 u \'edch v\'ec n\'f3 gi\'fap gi\u7843 m nh\u7865  g\'e1nh n\u7863 ng v\u7873  vi\u7879 c developer ph\u7843 i t\u7921  qu\u7843 n l\'fd thread v\'e0 t\u7853 p trung h\u417 n v\'e0o program design.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Up to now\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 T\'e1c gi\uc0\u7843  \u273 \'e3 t\u7921  t\'ecm t\'f2i v\'e0 research ra \u273 \u432 \u7907 c c\'e1c tips c\'f3 th\u7875  apply \u273 \u7875  gi\u7843 i quy\u7871 t c\'e1c v\u7845 n \u273 \u7873  ({\field{\*\fldinst{HYPERLINK "https://gist.github.com/tclementdev/6af616354912b0347cdf6db159c37057"}}{\fldrslt 
+\f2\i https://gist.github.com/tclementdev/6af616354912b0347cdf6db159c37057}}).\
+\'dd \uc0\u273 \u7883 nh ban \u273 \u7847 u c\u7911 a Apple v\u7873  libdispatch cu\u7889 i c\'f9ng \u273 \'e3 kh\'f4ng th\'e0nh c\'f4ng. M\u7863 c d\'f9 developer kh\'f4ng ph\u7843 i lo v\u7873  vi\u7879 c qu\u7843 n l\'fd thread nh\u432 ng b\'f9 l\u7841 i ph\u7843 i lo v\u7873  c\'e1ch s\u7917  d\u7909 ng queue y nh\u432  l\'e0 \u273 \u7889 i v\u7899 i thread.\
+Developer cu\uc0\u7889 i c\'f9ng v\u7851 n ch\'fa \'fd v\'e0 xem x\'e9t c\u7849 n th\u7853 n v\u7873  multithreading c\u361 ng nh\u432  program design ch\u7913  kh\'f4ng ph\u7843 i l\'e0 m\u7885 i heavy things \u273 \'e3 \u273 \u432 \u7907 c libdispatch gi\u7843 i quy\u7871 t nh\u432  Apple tuy\'ean b\u7889  l\'fac \u273 \u7847 u.\
+}
