@@ -1,0 +1,165 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\froman\fcharset0 Times-BoldItalic;}
+{\colortbl;\red255\green255\blue255;\red191\green131\blue193;\red34\green41\blue56;\red219\green226\blue236;
+\red84\green134\blue192;\red239\green236\blue231;\red236\green95\blue103;\red87\green194\blue193;\red254\green194\blue84;
+\red137\green195\blue135;\red245\green125\blue70;\red97\green96\blue86;}
+{\*\expandedcolortbl;;\cssrgb\c80000\c60000\c80000;\cssrgb\c17647\c21569\c28235;\cssrgb\c88627\c90980\c94118;
+\cssrgb\c40000\c60000\c80000;\cssrgb\c94902\c94118\c92549;\cssrgb\c94902\c46667\c47843;\cssrgb\c40000\c80000\c80000;\cssrgb\c100000\c80000\c40000;
+\cssrgb\c60000\c80000\c60000;\cssrgb\c97647\c56863\c34118;\cssrgb\c45490\c45098\c41176;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww37900\viewh18500\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://masilotti.com/testing-ui-without-ui-testing/"}}{\fldrslt 
+\f0\fs36 \cf0 https://masilotti.com/testing-ui-without-ui-testing/}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t gi\u7899 i thi\u7879 u 1 v\'e0i tr\u432 \u7901 ng h\u7907 p v\u7873  vi\u7879 c testing UI m\'e0 kh\'f4ng c\u7847 n d\'f9ng XCUITest, ch\u7881  d\'f9ng XCTest\
+\
+
+\f1\b\fs44 1. Unit test
+\f0\b0\fs36 \
+L\'e0 lowest level of testing,  \'93unit\'94  th\uc0\u432 \u7901 ng l\'e0 1 struct ho\u7863 c class.\
+\
+
+\f1\b\fs44 2. Integration test\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 1 level cao h\uc0\u417 n l\'e0 integration test, c\'f3 th\u7875  d\u7877  h\'ecnh dung l\'e0 gom c\'e1c unit kh\'e1c nhau l\u7841 i v\'e0 \u273 \u7875  ch\'fang ph\u7889 i h\u7907 p.\
+Integration test s\uc0\u7869  b\u7855 t d\u7847 u \u7903  n\u417 i n\'e0o \u273 \'f3 n\u7857 m gi\u7919 a stack v\'e0 stub out c\'e0ng \'edt c\'e0ng t\u7889 t.\
+V\'ed d\uc0\u7909 , test khi 1 h\'e0m c\u7909  th\u7875  s\u7869  \u273 \u432 \u7907 c call tr\'ean 1 controller khi table view add th\'eam 1 row. Ch\'fang ta c\'f3 th\u7875  stub out network connection nh\u432 ng vi\u7879 c t\u432 \u417 ng t\'e1c v\u7899 i model th\'ec n\'ean \u273 \u7875  nguy\'ean.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 3. Feature test\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 Th\uc0\u432 \u7901 ng d\'e0nh cho UI testing, s\u7869  test to\'e0n b\u7897  stack c\u7911 a application.\
+V\'ed d\uc0\u7909 , tap v\'e0o 1 button ho\u7863 c pull to refresh. Test b\u7855 t \u273 \u7847 u v\u7899 i 1 human interaction v\'e0 k\u7871 t th\'fac v\u7899 i vi\u7879 c verify 1 c\'e1i g\'ec \u273 \'f3 m\'e0 user c\'f3 th\u7875   th\u7845 y tr\'ean m\'e0n h\'ecnh.\
+Ngo\uc0\u7841 i tr\u7915  network connection, third-party code ho\u7863 c seed data, \u273 \u7889 i v\u7899 i feature test th\u432 \u7901 ng ch\'fang ta hi\u7871 m khi ph\u7843 i stub th\u7913  g\'ec.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 4. Feature test without UI testing\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 Th\uc0\u432 \u7901 ng d\'e0nh cho UI testing, s\u7869  test to\'e0n b\u7897  stack c\u7911 a application.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b \cf0 Test tapping 1 button
+\f0\b0 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f2 \cf2 \cb3 \expnd0\expndtw0\kerning0
+func\cf4  \cf5 testTappingAButton\cf6 ()\cf4  \cf2 throws\cf4  \cf6 \{\cf4 \
+    \cf2 let\cf4  \cf7 storyboard\cf4  \cf8 =\cf4  \cf9 UIStoryboard\cf6 (\cf7 name\cf6 :\cf4  \cf10 "Main"\cf6 ,\cf4  \cf7 bundle\cf6 :\cf4  \cf2 nil\cf6 )\cf4 \
+    \cf2 let\cf4  \cf7 controller\cf4  \cf8 =\cf4  \cf6 storyboard\cf8 .\cf5 instantiateViewController\cf6 (\cf7 identifier\cf6 :\cf4  \cf10 "Home"\cf6 )\cf4 \
+        \cf2 as!\cf4  \cf9 HomeViewController\cf4 \
+    \cf6 controller\cf8 .\cf5 loadViewIfNeeded\cf6 ()\cf4 \
+\
+    \cf6 controller\cf8 .\cf6 toggleTextButton\cf8 .\cf5 sendActions\cf6 (\cf7 for\cf6 :\cf4  \cf8 .\cf6 touchUpInside)\cf4 \
+\
+    \cf9 XCTAssertFalse\cf6 (controller\cf8 .\cf6 textLabel\cf8 .\cf6 isHidden)\cf4 \
+\cf6 \}
+\fs21\fsmilli10800 \cf4 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+Ta ph\uc0\u7843 i g\u7885 i 
+\f3\i\b loadViewIfNeeded
+\f0\i0\b0  \uc0\u273 \u7875  button \u273 \u432 \u7907 c init, sau \u273 \'f3 ta c\'f3 th\u7875  trigger 1 tap 
+\f3\i\b action
+\f0\i0\b0 .\
+\
+
+\f1\b Test pushing view controller
+\f0\b0 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f2 \cf2 \cb3 \expnd0\expndtw0\kerning0
+func\cf4  \cf5 testPushingAViewController\cf6 ()\cf4  \cf2 throws\cf4  \cf6 \{\cf4 \
+    \cf2 let\cf4  \cf7 storyboard\cf4  \cf8 =\cf4  \cf9 UIStoryboard\cf6 (\cf7 name\cf6 :\cf4  \cf7 \'93\cf9 Main\cf7 \'94\cf6 ,\cf4  \cf7 bundle\cf6 :\cf4  \cf2 nil\cf6 )\cf4 \
+    \cf2 let\cf4  \cf7 navigationController\cf4  \cf8 =\cf4  \cf6 storyboard\cf8 .\cf5 instantiateInitialViewController\cf6 ()\cf4 \
+        \cf2 as?\cf4  \cf9 UINavigationController\cf4 \
+    \cf2 let\cf4  \cf7 homeViewController\cf4  \cf8 =\cf4  \cf6 navigationController?\cf8 .\cf6 topViewController\cf4 \
+        \cf2 as!\cf4  \cf9 HomeViewController\cf4 \
+    \cf6 homeViewController\cf8 .\cf5 loadViewIfNeeded\cf6 ()\cf4 \
+\
+    \cf6 homeViewController\cf8 .\cf6 pushDetailButton\cf8 .\cf5 sendActions\cf6 (\cf7 for\cf6 :\cf4  \cf8 .\cf6 touchUpInside)\cf4 \
+    \cf9 RunLoop\cf8 .\cf6 current\cf8 .\cf5 run\cf6 (\cf7 until\cf6 :\cf4  \cf9 Date\cf6 ())\cf4 \
+\
+    \cf9 XCTAssertEqual\cf6 (navigationController?\cf8 .\cf6 viewControllers\cf8 .\cf6 count,\cf4  \cf11 2\cf6 )\cf4 \
+    \cf9 XCTAssert\cf6 (navigationController?\cf8 .\cf6 topViewController\cf4  \cf2 is\cf4  \cf9 DetailViewController\cf6 )\cf4 \
+\cf6 \}
+\fs21\fsmilli10800 \cf4 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+L\uc0\u432 u \'fd, n\u7871 u ta mu\u7889 n push v\u7899 i 
+\f3\i\b animated = true
+\f0\i0\b0 , ta ph\uc0\u7843 i call RunLoop v\'ec vi\u7879 c 
+\f3\i\b animation
+\f0\i0\b0  x\uc0\u7843 y ra b\'ean ngo\'e0i scope c\u7911 a test v\'e0 n\'f3 l\'e0 
+\f3\i\b asynchronous
+\f0\i0\b0 .\
+Vi\uc0\u7879 c call 
+\f3\i\b RunLoop
+\f0\i0\b0  s\uc0\u7869  l\'e0m cho test \u273 \u432 \u7907 c delay \'931 \'edt\'94 \u273 \u7911  \u273 \u7875  catch up v\u7899 i animation. L\'fac \u7845 y 2 c\'e2u l\u7879 nh Assert \u7903  cu\u7889 i h\'e0m m\u7899 i ch\u7841 y \u273 \'fang.\
+\
+
+\f1\b Test presenting modal view controller
+\f0\b0 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f2 \cf2 \cb3 \expnd0\expndtw0\kerning0
+func\cf4  \cf5 testPresentingAModalViewController\cf6 ()\cf4  \cf2 throws\cf4  \cf6 \{\cf4 \
+    \cf12 // load the controllers\cf4 \
+    \cf2 let\cf4  \cf7 storyboard\cf4  \cf8 =\cf4  \cf9 UIStoryboard\cf6 (\cf7 name\cf6 :\cf4  \cf10 "Main"\cf6 ,\cf4  \cf7 bundle\cf6 :\cf4  \cf2 nil\cf6 )\cf4 \
+    \cf2 let\cf4  \cf7 navigationController\cf4  \cf8 =\cf4  \cf6 storyboard\cf8 .\cf5 instantiateInitialViewController\cf6 ()\cf4 \
+        \cf2 as?\cf4  \cf9 UINavigationController\cf4 \
+    \cf2 let\cf4  \cf7 homeViewController\cf4  \cf8 =\cf4  \cf6 navigationController?\cf4  \cf8 .\cf6 topViewController\cf4 \
+        \cf2 as!\cf4  \cf9 HomeViewController\cf4 \
+\
+    \cf12 // attach them to a real window\cf4 \
+    \cf2 let\cf4  \cf7 window\cf4  \cf8 =\cf4  \cf9 UIWindow\cf6 ()\cf4 \
+    \cf6 window\cf8 .\cf6 rootViewController\cf4  \cf8 =\cf4  \cf6 navigationController\cf4 \
+    \cf6 window\cf8 .\cf5 makeKeyAndVisible\cf6 ()\cf4 \
+    \cf6 homeViewController\cf8 .\cf5 loadViewIfNeeded\cf6 ()\cf4 \
+\
+    \cf12 // tap the button and tick the run loop\cf4 \
+    \cf6 homeViewController\cf8 .\cf6 presentModalButton\cf8 .\cf5 sendActions\cf6 (\cf7 for\cf6 :\cf4  \cf8 .\cf6 touchUpInside)\cf4 \
+    \cf9 RunLoop\cf8 .\cf6 current\cf8 .\cf5 run\cf6 (\cf7 until\cf6 :\cf4  \cf9 Date\cf6 ())\cf4 \
+\
+    \cf12 // run the assertions\cf4 \
+    \cf2 let\cf4  \cf7 presentedViewController\cf4  \cf8 =\cf4  \cf6 navigationController?\cf8 .\cf6 presentedViewController\cf4 \
+    \cf9 XCTAssertNotNil\cf6 (presentedViewController)\cf4 \
+    \cf9 XCTAssert\cf6 (presentedViewController\cf4  \cf2 is\cf4  \cf9 ModalViewController\cf6 )\cf4 \
+\cf6 \}
+\fs21\fsmilli10800 \cf4 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\uc0\u272 \u7889 i v\u7899 i test presenting, ngo\'e0i vi\u7879 c call RunLoop ta l\u432 u \'fd ph\u7843 i make 1 
+\f3\i\b window\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\i0\fs44 \cf0 5. Ba h\uc0\u432 \u7899 ng ti\u7871 p c\u7853 n m\u7899 i \u273 \u7889 i v\u7899 i XCTest\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f0\b0\fs36 \cf0 {\listtext	\uc0\u8226 	}Send action \uc0\u273 \u7871 n button \u273 \u7875  simulate 1 tap\
+{\listtext	\uc0\u8226 	}Tick run lopp \uc0\u273 \u7875  \'93\u273 \u7907 i\'94 pushing controller\
+{\listtext	\uc0\u8226 	}S\uc0\u7917  d\u7909 ng real 
+\f3\i\b UIWindow
+\f0\i0\b0  \uc0\u273 \u7875  simulate 1 real app}

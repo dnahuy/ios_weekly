@@ -1,0 +1,84 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-BoldItalic;
+\f3\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww37900\viewh18500\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/swift-india/static-library-in-ios-d133123678d1"}}{\fldrslt 
+\f0\fs36 \cf0 https://medium.com/swift-india/static-library-in-ios-d133123678d1}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t gi\u7899 i thi\u7879 u v\u7873  Static Library, c\'e1c \u432 u nh\u432 \u7907 c \u273 i\u7875 m v\'e0 c\'e1ch s\u7917  d\u7909 ng ch\'fang trong iOS project\
+\
+
+\f1\b\fs44 Static Library
+\f0\b0\fs36 \
+L\'e0 1 file .a (Archive) ch\uc0\u7913  source code \u273 \'e3 \u273 \u432 \u7907 c compile\
+\
+
+\f1\b\fs44 L\uc0\u7907 i \'edch
+\f0\b0\fs36 \
+C\'f3 2 c\'e1i n\uc0\u7893 i tr\u7897 i:\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}
+\f2\i\b Reduce app compile time:
+\f0\i0\b0  B\uc0\u7857 ng c\'e1ch distributing 
+\f2\i\b pre-compiled
+\f0\i0\b0  static library binary, ch\'fang ta c\'f3 th\uc0\u7875  gi\u7843 m th\u7901 i gian compile n\u7871 u so v\u7899 i vi\u7879 c compile t\u7845 t c\u7843  c\'e1c source file\
+{\listtext	\uc0\u8226 	}
+\f2\i\b Reduce app launch time:
+\f0\i0\b0  C\'e1ch m\'e0 
+\f2\i\b Static Library
+\f0\i0\b0  work so s\'e1nh v\uc0\u7899 i 
+\f2\i\b Dynamic Frameworks
+\f0\i0\b0 , ch\'fang ta c\'f3 th\uc0\u7875  t\u7889 i \u432 u ho\'e1 
+\f2\i\b dylib loading time
+\f0\i0\b0  c\uc0\u7911 a 
+\f2\i\b Pre-main time
+\f0\i0\b0 , gi\'fap cho app launch nhanh h\uc0\u417 n\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 \
+Content c\uc0\u7911 a Static Library
+\f0\b0\fs36 \
+Bao g\uc0\u7891 m c\'e1c Object files. Ch\'fang ta c\'f3 th\u7875  s\u7917  d\u7909 ng tool 
+\f2\i\b ar
+\f0\i0\b0  \uc0\u273 \u7875  xem c\'e1c file .o ho\u7863 c tool 
+\f2\i\b nm
+\f0\i0\b0  \uc0\u273 \u7875  xem c\'e1c symbols\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 How it work
+\f0\b0\fs36 \
+Link file .a v\uc0\u7899 i App Target, n\'f3 s\u7869  \u273 \u432 \u7907 c copy v\'e0o app binary nh\u7901  v\'e0o Static Linking\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic 1_DGMEyePIeQ8A1Qd0hEhrlg.png \width12420 \height13420 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Khi n\'e0o kh\'f4ng n\'ean d\'f9ng static library\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0
+\f0\b0\fs36 \cf0 {\listtext	\uc0\u8226 	}
+\f2\i\b App size:
+\f0\i0\b0  S\uc0\u7869  t\u259 ng\
+{\listtext	\uc0\u8226 	}
+\f2\i\b Resources:
+\f0\i0\b0  Library ch\uc0\u7881  ch\u7913 a source code, n\'f3 kh\'f4ng th\u7875  ch\u7913 a c\'e1c resources nh\u432  Assets, Xibs, Storyboard ho\u7863 c JSON\
+}
