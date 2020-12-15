@@ -1,0 +1,106 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/better-programming/5-auto-layout-approaches-at-swift-b229cf396ee2"}}{\fldrslt 
+\f0\fs36 \cf0 https://medium.com/better-programming/5-auto-layout-approaches-at-swift-b229cf396ee2}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t gi\u7899 i thi\u7879 u v\u7873  5 c\'e1ch ti\u7871 p c\u7853 n \u273 \u7875  th\u7921 c hi\u7879 n Auto Layout tr\'ean iOS\
+\
+
+\f1\b\fs44 1. D\'f9ng NSLayoutConstraint
+\f0\b0\fs36 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \expnd0\expndtw0\kerning0
+item1.attribute1 = multiplier \'d7 item2.attribute2 + constant\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+\uc0\u272 \'e2y l\'e0 c\'e1ch ch\'fang ta v\u7851 n hay x\'e0i b\u7857 ng c\'e1ch s\u7917  d\u7909 ng c\'e1c third party nh\u432  SnapKit, Masonry\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 2. D\'f9ng Visual Format Language
+\f0\b0\fs36 \
+C\'e1ch th\uc0\u7913  2 l\'e0 d\'f9ng Visual Format String grammar, c\'e1ch n\'e0y th\'ec gi\'fap ch\'fang ta setup constraints \u273 \u7905  \'93l\u7857 ng nh\u7857 ng\'94 h\u417 n so v\u7899 i NSLayoutConstraints, tuy nhi\'ean n\'f3 c\u361 ng v\u7851 n s\u7869  c\'f3 nh\u7919 ng pitfalls c\u7911 a vi\u7879 c d\'f9ng string\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0     let verticalConstraints = NSLayoutConstraint.constraints(\
+        withVisualFormat: "V:[superView]-(<=0)-[view(100)]",\
+        options: .alignAllCenterX,\
+        metrics: nil,\
+        views: views\
+    )\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 3. D\'f9ng AutoresizingMask
+\f0\b0\fs36 \
+Autoresizing s\uc0\u7869  quy\u7871 t \u273 \u7883 nh c\'e1ch receiver resize ch\'ednh n\'f3 khi bounds c\u7911 a superview change.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0     subView.autoresizingMask = [\
+        .flexibleLeftMargin,\
+        .flexibleRightMargin,\
+        .flexibleTopMargin,\
+        .flexibleBottomMargin\
+    ]\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 4. D\'f9ng NSLayoutAnchor
+\f0\b0\fs36 \
+D\'f9ng NSLayoutAnchor s\uc0\u7869  kh\u7855 c ph\u7909 c ph\u7847 n n\'e0o nh\u432 \u7907 c \u273 i\u7875 m ph\u7843 i vi\u7871 t nh\u7919 ng \u273 o\u7841 n code d\'e0i v\'e0 complex \u273 \u7875  t\u7841 o ra layout constraint. \
+V\uc0\u7873  c\u417  b\u7843 n ch\'fang ta s\u7869  d\u7921 a ch\u7911  y\u7871 u tr\'ean c\'e1c anchor properties (v\'ed d\u7909 , leading, trailing, top, bottom anchor) v\'e0 add constraint mong mu\u7889 n.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0       
+\fs36 let leadingConstraint = subview.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 8.0)
+\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Ho\uc0\u7863 c ta c\'f3 th\u7875  gom t\u7845 t c\u7843  l\u7841 i:    
+\f2\fs24 \
+
+\fs36     NSLayoutConstraint.activate([\
+        subView.heightAnchor.constraint(equalToConstant: 100),\
+        subView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),\
+        subView.centerYAnchor.constraint(equalTo: view.centerYAnchor),\
+        subView.centerXAnchor.constraint(equalTo: view.centerXAnchor),\
+    ])\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 5. D\'f9ng instrinsicContentSize
+\f0\b0\fs36 \
+Trong v\'e0i tr\uc0\u432 \u7901 ng h\u7907 p, size c\u7911 a view s\u7869  d\u7921 a tr\'ean content m\'e0 n\'f3 \u273 ang ch\u7913 a (v\'ed d\u7909  UILabel), ta c\'f3 th\u7875  k\u7871 t h\u7907 p size n\'e0y v\u7899 i layout system.\
+C\'e1c constraint li\'ean quan t\uc0\u7899 i size c\u7911 a 1 view b\u7845 t k\u7923 , khi \u273 \'f3 auto layout system c\'f3 th\u7875  d\'f9ng instrinsicContentSize c\u7911 a view \u273 \'f3 \u273 \u7875  t\'ednh to\'e1n t\u432 \u417 ng \u7913 ng.\
+V\'ed d\uc0\u7909 , ta constraint height c\u7911 a 1 view v\u7899 i height c\u7911 a 1 UILabel (c\'f3 instrinsicContentSize d\u7921 a tr\'ean n\u7897 i dung text m\'e0 label \u273 ang ch\u7913 a).}
