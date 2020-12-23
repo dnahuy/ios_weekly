@@ -1,0 +1,67 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-BoldItalic;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red255\green255\blue255;\red0\green0\blue0;
+\red11\green79\blue121;\red15\green104\blue160;\red92\green38\blue153;\red63\green110\blue116;\red28\green0\blue207;
+\red46\green13\blue110;}
+{\*\expandedcolortbl;;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0;
+\csgenericrgb\c4314\c30980\c47451;\csgenericrgb\c5882\c40784\c62745;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c11000\c0\c81000;
+\csgenericrgb\c18100\c5200\c43100;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/cleansoftware/what-is-the-expressiblebyintegerliteral-protocol-in-swift-e71ad4a37a96"}}{\fldrslt 
+\f0\fs36 \cf0 https://medium.com/cleansoftware/what-is-the-expressiblebyintegerliteral-protocol-in-swift-e71ad4a37a96}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t gi\u7899 i thi\u7879 u v\u7873  
+\f2\i\b ExpressibleByIntegerLiteral 
+\f0\i0\b0 protocol\
+\
+
+\f1\b\fs44 V\'ed d\uc0\u7909 
+\f0\b0\fs36 \
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f3\fs32 \cf2 \cb3 struct\cf4  \cf5 CustomNumber\cf4  \{\
+    \cf2 let\cf4  \cf6 value\cf4 : \cf7 Int\cf4 ?\
+    \cf2 let\cf4  \cf6 isEven\cf4 : \cf7 Bool\cf4 ?\
+\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 Gi\uc0\u7843  s\u7917  ta c\u7847 n t\u7841 o ra 1 array c\u7911 a CustomNumber, ta s\u7869  ph\u7843 i vi\u7871 t nh\u432  sau:\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f3\fs32 \cf4 \cb3 \
+\cf2 let\cf4  \cf6 customNumbers\cf4 : [\cf8 CustomNumber\cf4 ] =\
+    [\
+        .init(value: \cf9 4\cf4 ),\
+        .init(value: \cf9 24\cf4 ),\
+        .init(value: \cf9 65\cf4 ),\
+        .init(value: \cf9 44\cf4 )\
+    ]
+\f0\fs36 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+N\uc0\u7871 u s\u7917  d\u7909 ng 
+\f2\i\b ExpressibleByIntegerLiteral  
+\f0\i0\b0 protocol, ta c\'f3 th\uc0\u7875  vi\u7871 t l\u7841 i g\u7885 n h\u417 n r\u7845 t nhi\u7873 u\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f3\fs32 \cf2 \cb3 extension\cf4  \cf8 CustomNumber\cf4 : \cf7 ExpressibleByIntegerLiteral\cf4  \{\
+    \cf2 init\cf4 (integerLiteral value: \cf7 Int\cf4 ) \{\
+        \cf2 self\cf4 .\cf8 value\cf4  = value\
+        \cf2 self\cf4 .\cf8 isEven\cf4  = \cf2 self\cf4 .\cf8 value\cf4 ?.\cf10 isMultiple\cf4 (of: \cf9 2\cf4 )\
+    \}\
+\}\
+\
+\cf2 let\cf4  \cf6 customNumbers\cf4 : [\cf8 CustomNumber\cf4 ] = [\cf9 1\cf4 , \cf9 13\cf4 , \cf9 22\cf4 , \cf9 56\cf4 , \cf9 28\cf4 ]\
+}

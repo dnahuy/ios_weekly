@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-Italic;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/flawless-app-stories/ignorance-of-the-urlrequest-cache-a3584bc2f05f"}}{\fldrslt 
+\f0\fs36 \cf0 https://medium.com/flawless-app-stories/ignorance-of-the-urlrequest-cache-a3584bc2f05f}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t gi\u7899 i thi\u7879 u v\u7873  c\'e1c cache policy c\u7911 a URLRequest (d\u297  nhi\'ean l\'e0 cache \u7903  ph\'eda client ch\u7913  ch\'fang ta kh\'f4ng x\'e9t \u273 \u7871 n cache ph\'eda BE).\
+\
+
+\f1\b\fs44 Caching Strategies
+\f0\b0\fs36 \
+NSURLRequest c\'f3 1 property l\'e0 cachePolicy, n\'f3 l\'e0 1 enum g\uc0\u7891 m\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f2\i \cf2 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 case useProtocolCachePolicy\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 case reloadIgnoringLocalCacheData\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 case reloadIgnoringLocalAndRemoteCacheData\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 static var reloadIgnoringCacheData: NSURLRequest.CachePolicy\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 case returnCacheDataElseLoad\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 case returnCacheDataDontLoad\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 case reloadRevalidatingCacheData\
+\pard\tx566\pardeftab720\partightenfactor0
+
+\f0\i0\fs24 \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 useProtocolCachePolicy
+\f0\b0\fs36 \
+\uc0\u272 \'e2y l\'e0 policy default. URLRequest s\u7869  s\u7917  d\u7909 ng caching logic \u273 \u432 \u7907 c \u273 \u7883 nh ngh\u297 a b\u7903 i protocol (n\u7871 u protocol c\'f3 \u273 \u7883 nh ngh\u297 a).\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Caching logic c\uc0\u7911 a HTTP/HTTPS
+\f0\b0\fs36 \
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	1.	}N\uc0\u7871 u cached response kh\'f4ng t\u7891 n t\u7841 i, URL loading system s\u7869  fetch data t\u7915  originating source.\
+{\listtext	2.	}Ng\uc0\u432 \u7907 c l\u7841 i, n\u7871 u c\'f3 cached nh\u432 ng cached response kh\'f4ng y\'eau c\u7847 u ph\u7843 i \u273 \u432 \u7907 c revalidated m\u7895 i l\u7847 n v\'e0 response c\u361 ng ch\u432 a c\u361  (ch\u432 a v\u432 \u7907 t qua expiration date), cached s\u7869  \u273 \u432 \u7907 c tr\u7843  v\u7873 .\
+{\listtext	3.	}N\uc0\u7871 u cached reponse \u273 \'e3 c\u361  ho\u7863 c c\u7847 n revalidate, URL loading system s\u7869  t\u7841 o 1 HEAD request \u273 \u7871 n originating source \u273 \u7875  xem resource c\'f3 changed hay kh\'f4ng. N\u7871 u c\'f3, fetch data t\u7915  source, ng\u432 \u7907 c l\u7841 i s\u7869  tr\u7843  cached v\u7873 .\
+}
