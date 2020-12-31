@@ -1,0 +1,74 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-BoldItalic;
+\f3\froman\fcharset0 Times-Italic;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://levelup.gitconnected.com/the-power-of-swift-web-assembly-part-1-fdfa4e9134ee"}}{\fldrslt 
+\f0\fs36 \cf0 https://levelup.gitconnected.com/the-power-of-swift-web-assembly-part-1-fdfa4e9134ee}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t h\u432 \u7899 ng d\u7851 n c\'e1ch integrate Swift code v\'e0o trong Golang project b\u7857 ng c\'e1ch d\'f9ng WebAssembly. Ch\'fang ta c\'f3 th\u7875  t\'ecm hi\u7875 u th\'eam v\u7873  WebAssembly trong nh\u7919 ng b\'e0i blog kh\'e1c\
+\
+
+\f1\b\fs44 WebAssembly\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 Tr\uc0\u432 \u7899 c \u273 \'e2y, \u273 \u7875  ph\'e1t tri\u7875 n WebApp, ch\'fang ta ch\u7881  c\u7847 n bi\u7871 t HTML/CSS/Javascript, hi\u7879 n gi\u7901  s\u7869  c\'f3 th\'eam WebAssembly (file .wasm). V\u7873  c\u417  b\u7843 n WebAssembly s\u7869  gi\'fap Javascript c\'f3 th\u7875  execute c\'e1c code vi\u7871 t b\u7857 ng ng\'f4n ng\u7919  kh\'e1c (v\'ed d\u7909  C/C++, Swift, v.v\'85)\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Tools\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 T\'e1c gi\uc0\u7843  gi\u7899 i thi\u7879 u c\'e1c tools c\u7847 n d\'f9ng v\'e0 c\'e1ch install ch\'fang.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\i\b \cf0 warmer: 
+\f0\i0\b0 l\'e0 1 WebAssembly runtime cho ph\'e9p load c\'e1c wasm binaries (Swift) v\'e0 communicate v\uc0\u7899 i supported host language (Go).\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Swift\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 T\'e1c gi\uc0\u7843  h\u432 \u7899 ng d\u7851 n t\u7841 o ra 1 Swift Package executable\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Go\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 T\uc0\u7841 o ra 1 Go project \u273 \u417 n gi\u7843 n\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Integrate wasmer\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 Integrate wasmer v\'e0o trong Go application\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 T\uc0\u7841 o ra .wasm t\u7915  Swift\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 Generate ra .wasm binary t\uc0\u7915  Swift project b\u7857 ng c\'e1c tool \u273 \'e3 c\'e0i \u7903  tr\'ean.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Start binary\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 Trong Go application, c\'f3 1 h\'e0m 
+\f3\i _start
+\f0\i0 , h\'e0m n\'e0y ch\uc0\u7881  \u273 \u417 n gi\u7843 n l\'e0 s\u7869  start binary (t\u432 \u417 ng t\u7921  nh\u432  khi g\u7885 i 
+\f3\i swift run
+\f0\i0 )}

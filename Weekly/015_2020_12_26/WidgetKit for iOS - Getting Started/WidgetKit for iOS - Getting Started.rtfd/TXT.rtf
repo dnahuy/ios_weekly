@@ -1,0 +1,188 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-BoldItalic;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\froman\fcharset0 Times-Italic;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red170\green13\blue145;
+\red11\green79\blue121;\red15\green104\blue160;\red92\green38\blue153;\red63\green110\blue116;\red0\green116\blue0;
+\red196\green26\blue22;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c0;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c66500\c5200\c56900;
+\csgenericrgb\c4314\c30980\c47451;\csgenericrgb\c5882\c40784\c62745;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c0\c45600\c0;
+\csgenericrgb\c77000\c10200\c8600;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://useyourloaf.com/blog/widgetkit-for-ios-getting-started/"}}{\fldrslt 
+\f0\fs36 \cf0 https://useyourloaf.com/blog/widgetkit-for-ios-getting-started/}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t h\u432 \u7899 ng d\u7851 n t\u7841 o ra 1 Widget \u273 \u417 n gi\u7843 n cho iOS\
+\
+
+\f1\b\fs44 T\uc0\u7841 o ra Widget Extension
+\f0\b0\fs36 \
+Trong XCode ta t\uc0\u7841 o ra 1 Widget Extension. Trong qu\'e1 tr\'ecnh t\u7841 o s\u7869  c\'f3 1 checkbox l\'e0 \'93Include Configuration Intent\'94, t\u7841 m th\u7901 i \u273 \u7875  cho \u273 \u417 n gi\u7843 n ta s\u7869  uncheck n\'f3, t\u7913 c l\'e0 ta s\u7869  ch\u7881  d\'f9ng Static Configuration.\
+\
+
+\f1\b\fs44 C\'e1c th\'e0nh ph\uc0\u7847 n ch\'ednh c\u7911 a Widget
+\f0\b0\fs36 \
+1 Widget s\uc0\u7869  c\'f3 3 th\'e0nh ph\u7847 n ch\'ednh\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\i\b \cf0 Configuration
+\f0\i0\b0 \
+Static (user kh\'f4ng th\uc0\u7875  configurable) ho\u7863 c Intent (cho ph\'e9p user c\'f3 th\u7875  configurable). Lu\'f4n bao g\u7891 m 3 ph\u7847 n: unique identifier (kind), timeline provider v\'e0 content closure.\
+S\uc0\u7917  d\u7909 ng modifier \u273 \u7875  set display name, description, supported widget size v\'e0 background network handler\
+\
+
+\f2\i\b Timeline provider
+\f0\i0\b0 \
+Cung c\uc0\u7845 p timestamped entry \
+\
+
+\f2\i\b Content closure
+\f0\i0\b0 \
+Nh\uc0\u7853 n v\'e0o timeline entry v\'e0 return SwiftUI View\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Static Configuration
+\f0\b0\fs36 \
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f3\fs32 \cf2 \cb3 StaticConfiguration(kind:, provider:, content:)
+\f0\fs36 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	1.	}
+\f4\i kind:
+\f0\i0  unique string identifier\
+{\listtext	2.	}
+\f4\i provider:
+\f0\i0  cung c\uc0\u7845 p 1 array of timeline entries \u273 \u7875  WidgetKit display l\'ean\
+{\listtext	3.	}
+\f4\i content: 
+\f0\i0 1 closure nh\uc0\u7853 n v\'e0o 1 timeline entry v\'e0 return 1 SwiftUI View\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Timeline Entry
+\f0\b0\fs36 \
+TimelineEntry l\'e0 1 protocol c\'f3 ch\uc0\u432 a Date\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f3\fs32 \cf4 \cb3 protocol\cf2  \cf5 TimelineEntry\cf2  \{\
+    \cf4 var\cf2  \cf6 date\cf2 : \cf7 Date\cf2  \{ \cf4 get\cf2  \}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Timeline Provider
+\f0\b0\fs36 \
+TimelineProvider c\'f3 3 protocol\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f3\fs32 \cf4 \cb3 protocol\cf2  \cf5 TimelineProvider\cf2  \{\
+    \cf4 associatedtype\cf2  \cf5 Entry\cf2  : \cf7 TimelineEntry\cf2 \
+\
+    \cf4 func\cf2  \cf6 placeholder\cf2 (in context: \cf7 Context\cf2 ) -> \cf7 CountryEntry\cf2 \
+    \cf4 func\cf2  \cf6 getSnapshot\cf2 (in context: \cf7 Context\cf2 , completion: \cf4 @escaping\cf2  (\cf8 Self\cf2 .\cf7 Entry\cf2 ) -> \cf7 Void\cf2 )\
+    \cf4 func\cf2  \cf6 getTimeline\cf2 (in context: \cf7 Context\cf2 , completion: \cf4 @escaping\cf2  (\cf7 Timeline\cf2 <\cf7 Self\cf2 .\cf7 Entry\cf2 >) -> \cf7 Void\cf2 )\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+WidgetKit s\uc0\u7869  g\u7885 i h\'e0m getTimeline \u273 \u7875  get c\'e1c timeline entries cho hi\u7879 n t\u7841 i, v\'e0 optionally, cho t\u432 \u417 ng lai \u273 \u7875  widget update content c\u7911 a n\'f3.\
+\
+WidgetKit s\uc0\u7869  c\'f3 1 refresh policy \u273 \u7875  bi\u7871 t khi n\'e0o c\u7847 n g\u7885 i getTimeline\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}
+\f2\i\b atEnd:
+\f0\i0\b0  sau date c\uc0\u7911 a last entry trong timeline\
+{\listtext	\uc0\u8226 	}
+\f2\i\b after(Date):
+\f0\i0\b0  sau 1 date trong t\uc0\u432 \u417 ng lai\
+{\listtext	\uc0\u8226 	}
+\f2\i\b never:
+\f0\i0\b0  WidgetKit s\uc0\u7869  kh\'f4ng t\u7921  \u273 \u7897 ng request timeline t\u7915  Widget. App ph\u7843 i ch\u7911  \u273 \u7897 ng b\'e1o cho WidgetKit request 1 timeline m\u7899 i.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 SwiftUI View
+\f0\b0\fs36 \
+Content c\uc0\u7847 n hi\u7879 n l\'ean c\u7911 a Widget, \u273 \u432 \u7907 c return t\u7915  content closure c\u7911 a Configuration (nh\u7853 n v\'e0o 1 timeline entry v\'e0 return 1 View).\
+\
+
+\f1\b\fs44 Widget Previews
+\f0\b0\fs36 \
+V\'ed d\uc0\u7909 :\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f3\fs32 \cf4 \cb3 struct\cf2  \cf5 CountryWidgetPreviews\cf2 : \cf7 PreviewProvider\cf2  \{\
+  \cf4 static\cf2  \cf4 var\cf2  \cf6 previews\cf2 : \cf4 some\cf2  \cf7 View\cf2  \{\
+    CountryView(country: Country.uk)\
+    .previewContext(WidgetPreviewContext(family: .systemSmall))\
+  \}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 User Interaction
+\f0\b0\fs36 \
+Khi user tap v\'e0o Widget, sytem s\uc0\u7869  launch app. Ta c\'f3 th\u7875  pass 1 url cho app b\u7857 ng c\'e1ch d\'f9ng 
+\f2\i\b widgetURL
+\f0\i0\b0  modifier\
+\
+V\'ed d\uc0\u7909 :\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f3\fs32 \cf2 \cb3 CountryView(country: country)\
+.widgetURL(country.url)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+Trong app, ta c\'f3 th\uc0\u7875  handle URL b\u7857 ng\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0
+\f2\i\b \cf0 {\listtext	\uc0\u8226 	}SwiftUI:
+\f0\i0\b0  
+\f3\fs32 \cf2 \cb3 onOpenURL(perform:)
+\f0\fs36 \cf0 \cb1  \
+\ls3\ilvl0
+\f2\i\b {\listtext	\uc0\u8226 	}UIKit
+\f0\i0\b0 : 
+\f3\fs32 \cf2 \cb3 application(\cf4 _\cf2 :open:options:)
+\f0\fs36 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Requesting a reload
+\f0\b0\fs36 \
+App c\'f3 th\uc0\u7875  ch\u7911  \u273 \u7897 ng make WidgetKit request 1  new timeline b\u7857 ng c\'e1ch d\'f9ng 
+\f2\i\b WidgetCenter
+\f0\i0\b0 \
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f3\fs32 \cf9 \cb3 // Reload single widget\cf2 \
+WidgetCenter.shared.reloadTimelines(ofKind: \cf10 "CountryWidget"\cf2 )}
