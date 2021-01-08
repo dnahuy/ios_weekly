@@ -1,0 +1,136 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-BoldItalic;
+\f3\fmodern\fcharset0 Courier;\f4\fswiss\fcharset0 Helvetica;\f5\froman\fcharset0 Times-Italic;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/mercari-engineering/one-approach-to-monitoring-ios-application-performance-dca73d02b2e8"}}{\fldrslt 
+\f0\fs36 \cf0 https://medium.com/mercari-engineering/one-approach-to-monitoring-ios-application-performance-dca73d02b2e8}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t gi\u7899 i thi\u7879 u v\u7873  1 solution cho monitoring performance c\u7911 a iOS app.\
+\
+
+\f1\b\fs44 C\'e1c options\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\i\fs36 \cf0 Build 1 in-house foundation
+\f0\i0\b0 \
+Ta c\'f3 th\uc0\u7875  d\'f9ng 
+\f3\fs32 \cf2 \expnd0\expndtw0\kerning0
+measure(_:)
+\f0\fs36 \cf0 \kerning1\expnd0\expndtw0  trong 
+\f3\fs32 \cf2 \expnd0\expndtw0\kerning0
+XCTest.framework
+\fs36  
+\f0 \cf0 \kerning1\expnd0\expndtw0 \uc0\u273 \u7875  track performance, run tr\'ean CI \u273 \u7875  ph\'e2n t\'edch k\u7871 t qu\u7843 , v\'e0 li\'ean t\u7909 c execute \u273 \u7875  b\u7843 o \u273 \u7843 m target operations performing nh\u432  expected.\
+C\'e1ch ti\uc0\u7871 p c\u7853 n n\'e0y c\'f3 \u432 u \u273 i\u7875 m l\'e0 ta c\'f3 th\u7875  nhanh ch\'f3ng ph\'e1t hi\u7879 n ra performance issue tr\u432 \u7899 c khi app \u273 \u432 \u7907 c release.\
+Tuy nhi\'ean, c\'e1ch n\'e0y \uc0\u273 \'f2i h\u7887 i ta ph\u7843 i c\'f3 resource \u273 \u7875  c\'f3 th\u7875  build v\'e0 maintain testing codebase v\'e0 CI system.\
+\
+
+\f2\i\b T\'edch h\uc0\u7907 p third-party solutions
+\f0\i0\b0 \
+S\uc0\u7917  d\u7909 ng Firebase Performance Monitoring (FPM). \u431 u \u273 i\u7875 m l\'e0 ta kh\'f4ng c\u7847 n ph\u7843 i t\u7921  build v\'e0 maintain. \
+Tuy nhi\'ean, nh\uc0\u432 \u7907 c \u273 i\u7875 m l\'e0\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}Ch\uc0\u7881  th\u7845 y data sau khi release changes \u273 \u7871 n users\
+{\listtext	\uc0\u8226 	}Kh\'f4ng th\uc0\u7875  control codebase ho\u7863 c metrics \u273 \u7875  track\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+Ngo\'e0i ra, FPM c\'f2n c\'f3 nh\uc0\u432 \u7907 c \u273 i\u7875 m:\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}Web Dashboard kh\'f4ng th\uc0\u7875  customize\
+{\listtext	\uc0\u8226 	}Kh\'f4ng th\uc0\u7875  alert khi performance suy gi\u7843 m.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\i\b\fs44 \cf0 Solution
+\f1\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 T\'e1c gi\uc0\u7843  s\u7917  d\u7909 ng solution l\'e0 d\'f9ng FPM nh\u432  datasource c\u7911 a vi\u7879 c tracking nh\u432 ng s\u7869  customize l\u7841 i Dash Board.
+\f1\b\fs44 \
+\
+
+\f2\i\fs36 Export FPM data \uc0\u273 \u7871 n BigQuery
+\f0\i0\b0 \
+FPM cho ph\'e9p export performance data v\'e0o Google BigQuery.\
+\
+
+\f2\i\b Architecture Overview
+\f0\i0\b0 \
+FPM send data \uc0\u273 \u7871 n BigQuery. B\'ean c\u7841 nh FPM, 1 v\'e0i data v\'ed d\u7909  nh\u432  binary size c\u361 ng \u273 c send t\u7915  CI (CircleCI) \u273 \u7871 n BigQuery. Data thu th\u7853 p \u273 \u432 \u7907 c s\u7869  \u273 \u432 \u7907 c visualized b\u7857 ng DashBoard (s\u7917  d\u7909 ng Looker). \
+Khi detect \uc0\u273 \u432 \u7907 c performance issue, alert s\u7869  \u273 \u432 \u7907 c g\u7917 i \u273 \u7871 n Slack.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f4\fs24 \cf0 {{\NeXTGraphic 1*4Yl5y5XysH97g_dIZR7VeA copy.png \width16800 \height9120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 C\'e1c metrics c\uc0\u7847 n monitor\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\i\fs36 \cf0 App Start Trace (t\uc0\u7915  FPM)
+\f0\i0\b0 \
+M\uc0\u7897 t trong nh\u7919 ng metric quan tr\u7885 ng nh\u7845 t:\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf0 {\listtext	\uc0\u8226 	}Start khi application load first object v\'e0o memory\
+\ls3\ilvl0{\listtext	\uc0\u8226 	}Stop khi first run loop successful sau khi application nh\uc0\u7853 n 
+\f5\i \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 UIApplicationDidBecomeActiveNotification
+\f0\i0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+
+\f2\i\b Frozen Frame Ratio (t\uc0\u7915  FPM)
+\f0\i0\b0 \
+T\uc0\u7927  l\u7879  frozen frame c\u7911 a 1 m\'e0n h\'ecnh, dao \u273 \u7897 ng t\u7915  0 \u273 \u7871 n 1. V\'ed d\u7909  0.05 ngh\u297 a l\'e0 c\'f3 5% frame c\u7911 a m\'e0n h\'ecnh n\'e0y m\u7845 t h\u417 n 
+\f2\i\b 700ms
+\f0\i0\b0  \uc0\u273 \u7875  load.\
+\
+
+\f2\i\b Binary Size (t\uc0\u7915  AppStore Connect)
+\f0\i0\b0 \
+Binary size kh\'f4ng th\uc0\u7875  get t\u7915  FPM n\'ean ch\'fang ta get gi\'e1 tr\u7883  n\'e0y tr\u7921 c ti\u7871 p t\u7915  AppStore connect. Ch\'fang ta c\'f3 th\u7875  d\'f9ng h\'e0m 
+\f3\fs32 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 tunes_build_details
+\fs24  
+\f0\fs36 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 t\uc0\u7915  Fastlane\'92s 
+\f3\fs32 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 spaceship
+\f0\fs36 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 DashBoard v\'e0 Alerting\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 Looker l\'e0 1 Visualization Tool c\'f3 th\uc0\u7875  t\'edch h\u7907 p v\u7899 i Slack v\'e0 send alert.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f4\b0\fs24 \cf0 {{\NeXTGraphic 1*Lo-agm6fcfsJB7aGpchFGQ.png \width14000 \height9780 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \
+}
