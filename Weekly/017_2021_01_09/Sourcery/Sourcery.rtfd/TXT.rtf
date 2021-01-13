@@ -1,0 +1,105 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red255\green255\blue255;\red0\green0\blue0;
+\red92\green38\blue153;\red11\green79\blue121;\red15\green104\blue160;\red63\green110\blue116;\red255\green255\blue255;
+\red0\green0\blue0;\red191\green131\blue194;\red234\green121\blue57;\red94\green141\blue255;\red38\green38\blue38;
+\red46\green13\blue110;\red38\green71\blue75;}
+{\*\expandedcolortbl;;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0;
+\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c4314\c30980\c47451;\csgenericrgb\c5882\c40784\c62745;\csgenericrgb\c24700\c43100\c45600;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c0\c0\c0;\cssrgb\c80000\c60000\c80392;\cssrgb\c94118\c55294\c28627;\cssrgb\c43922\c63529\c100000;\cssrgb\c20000\c20000\c20000;
+\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c14900\c27800\c29400;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww37900\viewh18460\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/krzysztofzablocki/Sourcery"}}{\fldrslt 
+\f0\fs36 \cf0 https://github.com/krzysztofzablocki/Sourcery}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+Sourcery l\'e0 1 command line tool d\'f9ng \uc0\u273 \u7875  generate ra Swift code\
+V\'ed d\uc0\u7909 :\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 extension\cf4  \cf5 Person\cf4 : \cf5 Equatable\cf4  \{\
+    \cf2 static\cf4  \cf2 func\cf4  ==(lhs: \cf5 Person\cf4 , rhs: \cf5 Person\cf4 ) -> \cf5 Bool\cf4  \{\
+        \cf2 guard\cf4  lhs.firstName == rhs.firstName \cf2 else\cf4  \{ \cf2 return\cf4  \cf2 false\cf4  \}\
+        \cf2 guard\cf4  lhs.lastName == rhs.lastName \cf2 else\cf4  \{ \cf2 return\cf4  \cf2 false\cf4  \}\
+        \cf2 guard\cf4  lhs.birthDate == rhs.birthDate \cf2 else\cf4  \{ \cf2 return\cf4  \cf2 false\cf4  \}\
+        \cf2 return\cf4  \cf2 true\cf4 \
+    \}\
+\}
+\f0\fs36 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\uc0\u272 \u7875  c\'f3 th\u7875  conform Equatable protocol, tr\u432 \u7899 c Swift 4.1 ch\'fang ta ph\u7843 i write h\'e0m == b\u7857 ng tay nh\u432  th\u7871  n\'e0y. T\u7915  Swift 4.1, ch\'fang ta \u273 \'e3 c\'f3 th\u7875  auto synthesized equatable.\
+Tuy nhi\'ean, n\uc0\u7871 u mu\u7889 n ch\'fang ta v\u7851 n c\'f3 th\u7875  d\'f9ng Sourcery \u273 \u7875  auto gen ra h\'e0m equal.\
+\
+V\'ed d\uc0\u7909 :\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 protocol\cf4  \cf6 AutoEquatable\cf4  \{ \}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 public\cf4  \cf2 struct\cf4  \cf6 Person\cf4 : \cf5 AutoEquatable\cf4  \{\
+    \cf2 public\cf4  \cf2 let\cf4  \cf7 name\cf4 : \cf5 String\cf4 \
+    \cf2 public\cf4  \cf2 let\cf4  \cf7 age\cf4 : \cf5 Int\cf4 \
+    \cf2 public\cf4  \cf2 let\cf4  \cf7 gender\cf4 : \cf5 Gender\cf4 \
+    \
+    \cf2 public\cf4  \cf2 init\cf4 (name: \cf5 String\cf4 , age: \cf5 Int\cf4 , gender: \cf5 Gender\cf4 ) \{\
+        \cf2 self\cf4 .\cf8 name\cf4  = name\
+        \cf2 self\cf4 .\cf8 age\cf4  = age\
+        \cf2 self\cf4 .gender = gender\
+    \}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+Ta \uc0\u273 \u7883 nh ngh\u297 a 1 protocol AutoEquatable nh\u432  1 annotation \u273 \u7875  cho Sourcery c\'f3 th\u7875  \'93nh\u7853 n bi\u7871 t\'94 v\'e0 gen code. Sau \u273 \'f3, ta s\u7869  c\'f3 \u273 o\u7841 n template language \u273 \u7875  gen code.\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs28 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 \{% \cf11 \strokec11 for\cf9 \strokec9  type \cf11 \strokec11 in\cf9 \strokec9  types.implementing.\cf12 \strokec12 AutoEquatable\cf9 \strokec9  %\}\
+\cf11 \strokec11 extension\cf9 \strokec9  \{\{ type.name \}\}: \cf12 \strokec12 Equatable\cf9 \strokec9  \{\
+\cf11 \strokec11     public\cf9 \strokec9  \cf11 \strokec11 static\cf9 \strokec9  \cf11 \strokec11 func\cf13 \strokec13  ==\cf12 \strokec12 (lhs: \{\{ type.name \}\}, rhs: \{\{ type.name \}\})\cf9 \strokec9  -> \cf12 \strokec12 Bool\cf9 \strokec9  \{\
+        \{% \cf11 \strokec11 for\cf9 \strokec9  \cf11 \strokec11 var\cf9 \strokec9  \cf11 \strokec11 in\cf9 \strokec9  type.variables %\}\
+         \cf11 \strokec11 guard\cf9 \strokec9  lhs.\{\{ \cf11 \strokec11 var\cf9 \strokec9 .name \}\} == rhs.\{\{ \cf11 \strokec11 var\cf9 \strokec9 .name \}\} \cf11 \strokec11 else\cf9 \strokec9  \{ \cf11 \strokec11 return\cf9 \strokec9  \cf12 \strokec12 false\cf9 \strokec9  \}\
+         \{% endfor %\}\
+\
+         \cf11 \strokec11 return\cf9 \strokec9  \cf12 \strokec12 true\cf9 \strokec9 \
+    \}\
+\}\
+\{% endfor %\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+Ch\uc0\u7841 y \u273 o\u7841 n template tr\'ean b\u7857 ng Sourcery ta s\u7869  gen ra \u273 \u432 \u7907 c code mong mu\u7889 n\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs28 \cf9 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 sourcery --sources AutoEquatable.playground/Sources \\\
+--output AutoEquatable.playground/Sources \\\
+--templates . \\\
+--watch\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+K\uc0\u7871 t qu\u7843 :\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 extension\cf4  \cf8 Person\cf4 : \cf5 Equatable\cf4  \{\
+    \cf2 public\cf4  \cf2 static\cf4  \cf2 func\cf4  ==(lhs: \cf8 Person\cf4 , rhs: \cf8 Person\cf4 ) -> \cf5 Bool\cf4  \{\
+        \cf2 guard\cf4  lhs.\cf8 name\cf4  \cf15 ==\cf4  rhs.\cf8 name\cf4  \cf2 else\cf4  \{ \cf2 return\cf4  \cf2 false\cf4  \}\
+        \cf2 guard\cf4  lhs.\cf8 age\cf4  \cf15 ==\cf4  rhs.\cf8 age\cf4  \cf2 else\cf4  \{ \cf2 return\cf4  \cf2 false\cf4  \}\
+        \cf2 guard\cf4  lhs.\cf8 gender\cf4  \cf16 ==\cf4  rhs.\cf8 gender\cf4  \cf2 else\cf4  \{ \cf2 return\cf4  \cf2 false\cf4  \}\
+        \
+        \cf2 return\cf4  \cf2 true\cf4 \
+    \}\
+\}}
