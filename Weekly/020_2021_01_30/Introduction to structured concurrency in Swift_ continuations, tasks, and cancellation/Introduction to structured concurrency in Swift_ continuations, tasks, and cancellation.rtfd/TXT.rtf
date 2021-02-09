@@ -1,0 +1,205 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red255\green255\blue255;\red0\green0\blue0;
+\red11\green79\blue121;\red15\green104\blue160;\red63\green110\blue116;\red92\green38\blue153;\red38\green71\blue75;
+\red196\green26\blue22;\red28\green0\blue207;\red46\green13\blue110;}
+{\*\expandedcolortbl;;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0;
+\csgenericrgb\c4314\c30980\c47451;\csgenericrgb\c5882\c40784\c62745;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c14900\c27800\c29400;
+\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c18100\c5200\c43100;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33700\viewh18000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://desiatov.com/swift-structured-concurrency-introduction/"}}{\fldrslt 
+\f0\fs36 \cf0 https://desiatov.com/swift-structured-concurrency-introduction/}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t gi\u7899 i thi\u7879 u v\u7873  Structured Concurrency trong Swift, bao g\u7891 m: continuation, task v\'e0 cancellation. T\'ednh n\u259 ng n\'e0y trong Swift th\u7921 c ra v\u7851 n \u273 ang experimental ch\u7913  ch\u432 a \u273 \u432 \u7907 c implement ch\'ednh th\u7913 c.\
+Trong b\'e0i vi\uc0\u7871 t, t\'e1c gi\u7843  c\'f3 code 1 CLI SwiftPM project \u273 \u7875  l\'e0m v\'ed d\u7909  minh ho\u7841  cho vi\u7879 c s\u7917  d\u7909 ng Structured Concurrency.\
+\
+
+\f1\b\fs44 Continuation
+\f0\b0\fs36 \
+Gi\'fap return v\uc0\u7873  1 async \u273 \u7875  ta c\'f3 th\u7875  g\u7885 i asyncronously.\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 struct\cf4  \cf5 UnsafeContinuation\cf4 <\cf5 T\cf4 > \{\
+  \cf2 func\cf4  \cf6 resume\cf4 (returning: \cf7 T\cf4 )\
+\}\
+\
+\cf2 func\cf4  \cf6 withUnsafeContinuation\cf4 <\cf5 T\cf4 >(\
+    operation: (\cf7 UnsafeContinuation\cf4 <\cf7 T\cf4 >) -> ()\
+) async -> T
+\f0\fs36 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+Ngo\'e0i ra c\'f2n c\'f3 continuation c\'f3 th\uc0\u7875  throwing\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 struct\cf4  \cf5 UnsafeThrowingContinuation\cf4 <\cf5 T\cf4 , \cf5 E\cf4 : \cf8 Error\cf4 > \{\
+  \cf2 func\cf4  \cf6 resume\cf4 (returning: \cf7 T\cf4 )\
+  \cf2 func\cf4  \cf6 resume\cf4 (throwing: \cf7 E\cf4 )\
+\}\
+\
+\cf2 func\cf4  \cf6 withUnsafeThrowingContinuation\cf4 <\cf5 T\cf4 >(\
+    operation: (\cf7 UnsafeThrowingContinuation\cf4 <\cf7 T\cf4 , \cf8 Error\cf4 >) -> ()\
+) async \cf2 throws\cf4  -> 
+\f0\fs36 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+Do return l\'e0 1 async n\'ean ta c\'f3 th\uc0\u7875  s\u7917  d\u7909 ng v\u7899 i await nh\u432  sau:\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf4 \cb3 await \cf9 withUnsafeContinuation\cf4  \{ c \cf2 in\cf4 \
+    \cf8 DispatchQueue\cf4 .global()\
+        .asyncAfter(deadline: .now() + .seconds(seconds)) \{\
+            c.resume(returning: ())\
+        \}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+D\uc0\u7921 a tr\'ean h\'e0m n\'e0y, ch\'fang ta c\'f3 th\u7875  convert 1 h\'e0m g\u7885 i theo ki\u7875 u callback completion th\'f4ng th\u432 \u7901 ng th\'e0nh d\u7841 ng async/await. V\'ed d\u7909  nh\u432  
+\f2\fs32 \cf4 \cb3 URLSession.shared.dataTask\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+\cf2 try\cf4  await \cf9 withUnsafeThrowingContinuation\cf4  \{ c \cf2 in\cf4 \
+        \cf2 let\cf4  task = URLSession.shared.dataTask(with: URL(string: url)!) \{ data, \cf2 _\cf4 , error \cf2 in\cf4 \
+            \cf2 switch\cf4  (data, error) \{\
+            \cf2 case\cf4  \cf2 let\cf4  (\cf2 _\cf4 , error?):\
+                \cf2 return\cf4  c.resume(throwing: error)\
+            \cf2 case\cf4  \cf2 let\cf4  (data?, \cf2 _\cf4 ):\
+                \cf2 return\cf4  c.resume(returning: data)\
+            \cf2 case\cf4  (\cf2 nil\cf4 , \cf2 nil\cf4 ):\
+                c.resume(throwing: UnknownError())\
+            \}\
+        \}\
+        task.resume()\
+    \}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Entry Point\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 T\uc0\u7915  non-async code, ta c\'f3 th\u7875  g\u7885 i c\'e1c h\'e0m async b\u7857 ng 
+\f2\fs32 \cf4 \cb3 runAsyncAndBlock\
+
+\f0\fs36 \cf0 \cb1 \
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf4 \cb3 runAsyncAndBlock \{\
+    print(\cf10 "task started"\cf4 )\
+    \cf2 let\cf4  data = \cf2 try\cf4 ! await download(\cf10 "https://httpbin.org/uuid"\cf4 )\
+    print(String(data: data, encoding: .utf8)!)\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+L\uc0\u432 u \'fd, kh\'f4ng g\u7885 i h\'e0m n\'e0y \u7903  tr\'ean UI thread v\'ec n\'f3 s\u7869  g\'e2y block UI.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 async let\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 T\uc0\u432 \u417 ng t\u7921  nh\u432  
+\f2\fs32 \cf8 \cb3 DispatchGroup
+\f0\fs36 \cf0 \cb1 , ta c\'f3 th\uc0\u7875  ch\u7841 y nhi\u7873 u async \u273 \u7891 ng th\u7901 i v\'e0 await t\u7845 t c\u7843  c\'e1c async \u273 \'f3. C\'e1c async n\'e0y s\u7867  gi\u7889 ng nh\u432  c\'e1c child taks\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 func\cf4  \cf6 childTasks\cf4 () async \cf2 throws\cf4  -> String \{\
+    print(\cf10 "\cf4 \\(\cf2 #function\cf4 )\cf10  started"\cf4 )\
+\
+    async \cf2 let\cf4  uuid1 = download(\cf10 "https://httpbin.org/uuid"\cf4 )\
+    async \cf2 let\cf4  uuid2 = download(\cf10 "https://httpbin.org/uuid"\cf4 )\
+\
+    \cf2 return\cf4  \cf2 try\cf4  await \cf10 """\cf4 \
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+\cf10     ids fetched concurrently:\cf4 \
+\cf10     uuid1: \cf4 \\(String(data: uuid1, encoding: .utf8)!)\
+\cf10     uuid2: \cf4 \\(String(data: uuid2, encoding: .utf8)!)\
+\cf10     """\cf4 \
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+H\'e0m 
+\f2\fs32 \cf6 \cb3 childTasks
+\f0\fs36 \cf0 \cb1  l\'e0 1 h\'e0m async trong \uc0\u273 \'f3 c\'f3 2 async con l\'e0 
+\f2\fs32 \cf4 \cb3 uuid1
+\f0\fs36 \cf0 \cb1  v\'e0 
+\f2\fs32 \cf4 \cb3 uuid2
+\f0\fs36 \cf0 \cb1  \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Cancellation\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 async let \uc0\u7903  tr\'ean t\u7841 o th\'e0nh task hierachy v\u7899 i parent v\'e0 childs, khi parent task b\u7883  cancelled th\'ec child tasks c\u361 ng s\u7869  b\u7883  cancelled. Cancellation trong Structured Concurrency c\'f3 t\'ednh ph\u7889 i h\u7907 p (cooperative).\
+T\uc0\u7913 c l\'e0 c\'e1c tasks c\u7847 n ph\u7889 i h\u7907 p v\u7899 i nhau theo 1 c\'e1ch r\'f5 r\'e0ng \u273 \u7875  c\'f3 th\u7875  cancel ngay khi c\'f3 th\u7875 . Ta c\'f3 2 h\'e0m static l\'e0 isCancelled v\'e0 checkCancellation \u273 \u7875  ki\u7875 m tra xem task \u273 \'e3 b\u7883  cancel hay ch\u432 a.\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 try\cf4  await Task.checkCancellation() \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \uc0\u273 \u432 \u7907 c excute trong 1 task s\u7869  throw 
+\f2\fs32 \cf4 \cb3 Task.CancellationError 
+\f0\fs36 \cf0 \cb1 n\uc0\u7871 u task \u273 \'e3 \u273 \u432 \u7907 c cancel tr\u432 \u7899 c \u273 \'f3.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Task handlers\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 \uc0\u272 \u7875  c\'f3 th\u7875  cancel, ta ph\u7843 i get handle c\u7911 a Task, ta c\'f3 th\u7875  l\'e0m b\u7857 ng c\'e1ch g\u7885 i h\'e0m runDetached\
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 let\cf4  \cf6 handle\cf4  = Task.runDetached \{\
+    await sleep(seconds: \cf11 1\cf4 )\
+    \cf2 try\cf4  await print(childTasks())\
+\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \uc0\u7902  \u273 o\u7841 n code tr\'ean, childTasks() l\'e0 1 task con c\u7911 a parent task g\u7891 m c\'f3 sleep v\'e0 childTasks. \
+\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf7 \cb3 handle\cf4 .cancel()\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 Parent task b\uc0\u7883  cancel n\'ean childTasks c\u361 ng s\u7869  b\u7883  cancel
+\f2\fs32 \cf4 \cb3 \
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+\cf4 \
+\cf2 do\cf4  \{\
+    \cf2 try\cf4  await \cf7 handle\cf4 .get()\
+\} \cf2 catch\cf4  \{\
+    \cf2 if\cf4  error \cf2 is\cf4  \cf8 Task\cf4 .\cf8 CancellationError\cf4  \{\
+        \cf12 print\cf4 (\cf10 "task cancelled"\cf4 )\
+    \} \cf2 else\cf4  \{\
+        \cf12 print\cf4 (error)\
+    \}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf4 \
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+}
