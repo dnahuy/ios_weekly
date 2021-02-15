@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-Italic;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18240\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/dev-genius/how-to-fix-your-ci-to-avoid-apple-2fa-e1b101555dc1"}}{\fldrslt 
+\f0\fs36 \cf0 https://medium.com/dev-genius/how-to-fix-your-ci-to-avoid-apple-2fa-e1b101555dc1}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t h\u432 \u7899 ng d\u7851 n v\u7873  vi\u7879 c d\'f9ng AppStore Connect API \u273 \u7875  c\'f3 th\u7875  v\u432 \u7907 t qua 2FA (Two-Factor Authenticaton) c\u7911 a Apple\
+\
+
+\f1\b\fs44 Apple 2FA
+\f0\b0\fs36 \
+C\'e1c developer v\uc0\u7899 i Account Holder role s\u7869  b\u7855 t bu\u7897 c ph\u7843 i enable 2FA \u273 \u7875  sign-in v\'e0o Apple Developer account & Certificates, Identifiers and Profiles.\
+\uc0\u272 i\u7873 u n\'e0y khi\u7871 n cho c\'e1c CI d\'f9ng username/password s\u7869  kh\'f4ng c\'f2n work \u273 \u432 \u7907 c n\u7919 a. Ta c\'f3 th\u7875  v\u432 \u7907 t qua tr\u7903  ng\u7841 i n\'e0y b\u7857 ng c\'e1ch chuy\u7875 n sang d\'f9ng AppStore Connect API.\
+\
+
+\f1\b\fs44 Fastlane
+\f0\b0\fs36 \
+Fastlane \uc0\u273 \'e3 h\u7895  tr\u7907  new AppStore Connect API trong 1 s\u7889  API nh\u432 : pilot, deliver, sigh, cert, match, v.v\'85.\
+\
+
+\f1\b\fs44 AppStore Connect API\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 \uc0\u272 \u7875  c\'f3 th\u7875  d\'f9ng AppStore Connect API, ch\'fang ta s\u7869  c\u7847 n: key id, issuer id, .p8 file.\
+Ta c\'f3 th\uc0\u7875  gen t\u7915  link n\'e0y: {\field{\*\fldinst{HYPERLINK "https://appstoreconnect.apple.com/access/api/new"}}{\fldrslt https://appstoreconnect.apple.com/access/api/new}}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Update Lanes in Fastfile\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 V\'ed d\uc0\u7909 , ta s\u7869  s\u7917  d\u7909 ng 
+\f2\i pilot
+\f0\i0  v\uc0\u7899 i new API\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3 \cf2 \expnd0\expndtw0\kerning0
+lane :testflight_upload do\
+  gym(\'85 configuration params \'85)\
+  api_key = app_store_connect_api_key(\
+    key_id: \'93Your Key id\'94,\
+    issuer_id: \'93Your Issuer Id\'94,\
+    key_filepath: \'93.p8 File path\'94\
+  )\
+  pilot(api_key: api_key, \
+        \'85 more configuration params \'85\
+  )\
+end}
