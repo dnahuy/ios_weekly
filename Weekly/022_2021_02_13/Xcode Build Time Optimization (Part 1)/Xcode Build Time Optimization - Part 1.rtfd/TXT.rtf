@@ -1,0 +1,102 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-BoldItalic;
+\f3\froman\fcharset0 Times-Italic;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red83\green83\blue83;\red23\green24\blue28;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c40000\c40000\c40000;\cssrgb\c11765\c12549\c14510;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33300\viewh18280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.onswiftwings.com/posts/build-time-optimization-part1/"}}{\fldrslt 
+\f0\fs36 \cf0 https://www.onswiftwings.com/posts/build-time-optimization-part1/}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t gi\u7899 i thi\u7879 u v\u7873  v\'e0i settings ta c\'f3 th\u7875  set \u273 \u7875  get c\'e1c build metrics.\
+\
+
+\f1\b\fs44 2 lo\uc0\u7841 i build
+\f0\b0\fs36 \
+Clean build\
+Incremental build\
+\
+
+\f1\b\fs44 \uc0\u272 o build time
+\f0\b0\fs36 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\i\b \cf0 XCode build report
+\f0\i0\b0 \
+Ta c\'f3 th\uc0\u7875  xem build time v\'e0 log t\u7915  Report Navigator\
+\
+
+\f2\i\b XCode build timimg summary
+\f0\i0\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3\i \cf0 Product -> Perform Action -> Build With Timing Summary
+\f0\i0 \
+\
+Ch\'fang ta s\uc0\u7869  xem \u273 \u432 \u7907 c chi ti\u7871 t h\u417 n v\u7873  time c\u7911 a t\u7915 ng tasks.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\i\b \cf0 Type check warning
+\f0\i0\b0 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f3\i\fs40 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 -Xfrontend -warn-long-function-bodies = 100\
+-Xfrontend -warn-long-expression-type-checking = 100\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\i0\fs36 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+
+\f2\i\b Compiler diagnostic options
+\f0\i0\b0 \
+Ta c\'f3 th\uc0\u7875  th\'eam c\'e1c settings flag (OTHER_SWIFT_FLAGS) l\'fac build \u273 \u7875  xem r\'f5 h\u417 n v\u7873  c\'e1c build metrics\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\i\fs40 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 -driver-time-compilation:
+\f0\i0  high-level timing c\uc0\u7911 a c\'e1c job m\'e0 driver execute\
+\pard\pardeftab720\partightenfactor0
+
+\f3\i \cf2 -Xfrontend -debug-time-compilation\strokec3 :
+\f0\i0  timers cho t\uc0\u7915 ng phase c\u7911 a frontend job execution\
+
+\f3\i \strokec4 -Xfrontend -debug-time-function-bodies:
+\f0\i0  time spent typechecking c\uc0\u7911 a m\u7885 i h\'e0m trong app.\
+
+\f3\i -Xfrontend -debug-time-expression-type-checking\strokec3 :
+\f0\i0  time spent typechecking c\uc0\u7911 a m\u7885 i expression trong app.\strokec4 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\i\b\fs36 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 Target\'92s build times
+\f0\i0\b0 \
+xcode-build-times-rendering l\'e0 1 tool gi\'fap \uc0\u273 \u417 n gi\u7843 n ho\'e1 vi\u7879 c \u273 o build time c\u7911 a c\'e1c target v\'e0 generate ra th\'e0nh 1 chart.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\i\b \cf0 Metric t\uc0\u7893 ng h\u7907 p\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\i0\b0 \cf0 XCLogParser l\'e0 1 tool gi\'fap ta t\uc0\u7893 ng h\u7907 p l\u7841 i c\'e1c metrics kh\'e1c nhau v\'e0 cung c\u7845 p th\'eam r\u7845 t nhi\u7873 u th\'f4ng tin v\u7873  build.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\i\b \cf0 Automation\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\i0\b0 \cf0 Ta c\'f3 th\uc0\u7875  d\'f9ng CI \u273 \u7875  t\u7921  \u273 \u7897 ng ho\'e1 vi\u7879 c get c\'e1c metrics daily.}
