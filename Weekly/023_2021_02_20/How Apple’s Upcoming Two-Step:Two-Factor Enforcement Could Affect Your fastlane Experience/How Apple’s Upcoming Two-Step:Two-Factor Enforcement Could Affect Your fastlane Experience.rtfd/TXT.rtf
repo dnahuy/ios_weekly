@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-Italic;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\froman\fcharset0 Times-BoldItalic;}
+{\colortbl;\red255\green255\blue255;\red83\green83\blue83;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c40000\c40000\c40000;\cssrgb\c100000\c100000\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18300\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.joshholtz.com/blog/2021/02/17/apples-2fa-with-fastlane.html"}}{\fldrslt 
+\f0\fs36 \cf0 https://www.joshholtz.com/blog/2021/02/17/apples-2fa-with-fastlane.html}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t tr\'ecnh b\'e0y v\u7873  nh\u7919 ng thay \u273 \u7893 i \u273 \u7889 i v\u7899 i Apple ID c\'f3 th\u7875  l\'e0m \u7843 nh h\u432 \u7903 ng \u273 \u7871 n fastlane. K\u7875  t\u7915  th\'e1ng 2/2021, c\'e1c Apple ID account khi sign in v\'e0o AppStore Connect s\u7869  \u273 \'f2i h\u7887 i ph\u7843 i b\u7853 t Two-Steps Verification (2SV) ho\u7863 c Two-Factor Authentication (2FA). \u272 i\u7873 u n\'e0y r\'f5 r\'e0ng s\u7869  \u7843 nh h\u432 \u7903 ng \u273 \u7871 n fastlane n\u7871 u fastlane c\'f3 login b\u7857 ng Apple ID \u273 \u7875  t\u432 \u417 ng t\'e1c v\u7899 i App Store Connect.\
+\
+
+\f1\b\fs44 Run fastlane tr\'ean CI\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 N\uc0\u7871 u ch\'fang ta ch\u7881  run fastlane locally th\'ec v\u7845 n \u273 \u7873  c\u361 ng kh\'f4ng qu\'e1 nghi\'eam tr\u7885 ng v\'ec ch\'fang ta c\'f3 th\u7875  t\u7921  m\'ecnh nh\u7853 p code t\u7915  2SV/2FA v\'e0o CLI khi \u273 \u432 \u7907 c y\'eau c\u7847 u.\
+Tuy nhi\'ean, n\uc0\u7871 u fastlane \u273 \u432 \u7907 c d\'f9ng \u273 \u7875  run tr\'ean CI th\'ec ch\'fang ta kh\'f4ng th\u7875  l\'e0m nh\u432  v\u7853 y \u273 \u432 \u7907 c. Ta s\u7869  c\'f3 2 option\
+\
+
+\f2\i Option 1: Ti\uc0\u7871 p t\u7909 c s\u7917  d\u7909 ng Apple ID nh\u432 ng v\u7899 i pre-generated session
+\f0\i0 \
+\
+Run: 
+\f3\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 fastlane spaceauth \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 Sau \uc0\u273 \'f3 ta c\u7847 n nh\u7853 p code t\u7915  2SV/2FA v\'e0 output c\u7911 a command n\'e0y s\u7869  c\u7847 n \u273 \u432 \u7907 c l\u432 u v\'e0o environment variable FASTLANE_SESSION\
+Session n\'e0y s\uc0\u7869  valid trong kho\u7843 ng 15-30 ng\'e0y v\'e0 sau \u273 \'f3 ch\'fang ta s\u7869  c\u7847 n ph\u7843 i ch\u7841 y l\u7841 i command (v\'e0 nh\u7853 p l\u7841 i code 2SV/2FA) \u273 \u7875  gen ra l\u7841 i session m\u7899 i. \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\i \cf0 Option 2: Migrate \uc0\u273 \u7871 n AppStore Connect API key\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \uc0\u272 \'e2y l\'e0 c\'e1ch \u273 \u432 \u7907 c recommend h\u417 n c\'e1ch 1, thay v\'ec ti\u7871 p t\u7909 c d\'f9ng Apple ID, ch\'fang ta s\u7869  chuy\u7875 n qua d\'f9ng AppStore Connect API key.\
+Thay v\'ec d\'f9ng 
+\f4\i\b username
+\f0\i0\b0  option ho\uc0\u7863 c 
+\f4\i\b FASTLANE_USER/FASTLANE_PASSWORD
+\f0\i0\b0  environment variables, ch\'fang ta c\'f3 th\uc0\u7875  chuy\u7875 n qua d\'f9ng api_key, api_key_path_option ho\u7863 c APPSTORE_CONNECT_API_KEY, APPSTORE_CONNECT_API_KEY_PATH variables.\
+\
+\uc0\u272 a ph\u7847 n c\'e1c tools, actions \u273 \'e3 h\u7895  tr\u7907  c\'e1c option m\u7899 i n\'e0y \
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}
+\f2\i Tools:
+\f0\i0  cert, deliver, match, pilot, precheck, sigh\
+{\listtext	\uc0\u8226 	}
+\f2\i Actions:
+\f0\i0  app_store_build_number, latest_testflight_build_number, register_device, register_devices, set_changelog\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Tuy nhi\'ean, custom 
+\f2\i spaceship
+\f0\i0  code, 
+\f2\i produce
+\f0\i0 , 
+\f2\i pem
+\f0\i0 , ho\uc0\u7863 c 
+\f2\i download_dsyms
+\f0\i0  v\uc0\u7851 n ch\u432 a \u273 \u432 \u7907 c support \u273 \u7847 y \u273 \u7911  AppStore Connect API key\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Other changes c\'f3 th\uc0\u7875  c\u7847 n th\u7921 c hi\u7879 n\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f4\i\fs36 \cf0 Khi n\'e0o download_dsyms?
+\f1\i0\fs44 \
+
+\f0\b0\fs36 Run locally ho\uc0\u7863 c \u7903  1 job kh\'e1c. Job n\'e0y c\'f3 th\u7875  run 1 l\u7847 n m\u7895 i ng\'e0y ho\u7863 c v\'e0i l\u7847 n m\u7895 i tu\u7847 n.\
+
+\f4\i\b \
+C\'f3 th\uc0\u7921 c s\u7921  c\u7847 n Apple ID ho\u7863 c AppStore Connect API?\
+match
+\f0\i0\b0  v\uc0\u7899 i read-only mode cho signing, kh\'f4ng c\u7847 n \u273 \u7871 n auth. 
+\f4\i\b gym
+\f0\i0\b0  c\uc0\u361 ng kh\'f4ng c\u7847 n auth \u273 \u7875  build v\'e0 sign app.\
+Uploading binary l\'ean AppStore ho\uc0\u7863 c Testflight, c\'f3 th\u7875  d\'f9ng 
+\f4\i\b deliver
+\f0\i0\b0  ho\uc0\u7863 c 
+\f4\i\b pilot
+\f0\i0\b0  v\uc0\u7899 i 
+\f1\b FASTLANE_APPLICATION_SPECIFIC_PASSWORD
+\f0\b0  c\uc0\u361 ng kh\'f4ng c\u7847 n \u273 \u7871 n Apple ID ho\u7863 c AppStore Connect API Key.\
+
+\f4\i\b \
+produce v\'e0 pem kh\'f4ng fully work v\uc0\u7899 i AppStore Connect API key\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0
+\f2\b0 \cf0 {\listtext	\uc0\u8226 	}produce:
+\f0\i0  t\uc0\u7841 o ra new iOS app tr\'ean AppStore Connect v\'e0 Apple Developer Portal\
+\ls2\ilvl0
+\f2\i {\listtext	\uc0\u8226 	}pem:
+\f0\i0  t\uc0\u7921  \u273 \u7897 ng generate v\'e0 renew push notification profile\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 2 tools n\'e0y v\uc0\u7851 n c\'f2n c\u7847 n \u273 \u7871 n Apple ID.}

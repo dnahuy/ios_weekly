@@ -1,0 +1,47 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-Italic;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33100\viewh17880\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/360learning-engineering/resolving-itms-90562-invalid-bundle-email-from-the-app-store-d4a1030418e5"}}{\fldrslt 
+\f0\fs36 \cf0 https://medium.com/360learning-engineering/resolving-itms-90562-invalid-bundle-email-from-the-app-store-d4a1030418e5}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Gi\uc0\u7899 i thi\u7879 u
+\f0\b0\fs36 \
+B\'e0i vi\uc0\u7871 t gi\u7899 i thi\u7879 u v\u7873  1 error m\'e0 t\'e1c gi\u7843  g\u7863 p ph\u7843 i khi \'e1p d\u7909 ng Modularization architect. Error n\'e0y li\'ean quan t\u7899 i missing framework v\'e0 ch\u7881  \u273 \u432 \u7907 c ph\'e1t hi\u7879 n khi upload build l\'ean AppStore (t\u7913 c l\'e0 v\u7851 n work well khi dev \u7903  local).\
+C\uc0\u7847 n l\u432 u \'fd: t\'e1c gi\u7843  d\'f9ng Carthage cho Dependency Management.\
+\
+
+\f1\b\fs44 Transitive framework dependency
+\f0\b0\fs36 \
+C\'f3 3 module: A, B v\'e0 C. Trong \uc0\u273 \'f3, A ph\u7909  thu\u7897 c v\'e0o B, B ph\u7909  thu\u7897 c v\'e0o C do \u273 \'f3 A ph\u7909  thu\u7897 c gi\'e1n ti\u7871 p v\'e0o C. A l\'e0 main module, s\u7869  \u273 \u432 \u7907 c archived v\'e0 ship \u273 \u7871 n AppStore.\
+XCode work well v\uc0\u7899 i nh\u7919 ng dependencies nh\u432  th\u7871  v\'e0 khi app \u273 \u432 \u7907 c compile th\'e0nh c\'f4ng, s\u7869  kh\'f4ng c\'f3 b\u7845 t k\u7923  missing framework n\'e0o \u7903  runtime, trong su\u7889 t development ho\u7863 c testing.\
+Nh\uc0\u432 ng sau khi build \u273 \u432 \u7907 c submit v\'e0 x\u7917  l\'fd b\u7903 i AppStore, nhi\u7873 u kh\u7843  n\u259 ng ta s\u7869  g\u7863 p error: \'93
+\f2\i Invalid Bundle - One or more dynamic libraries that are referenced by your app are not present in the dylib search path
+\f0\i0 \'94.\
+\
+
+\f1\b\fs44 Missing frameworks
+\f0\b0\fs36 \
+Ta c\uc0\u7847 n get file .ipa c\u7911 a b\u7843 n build \u273 ang g\u7863 p l\u7895 i, unzip n\'f3 v\'e0 sau \u273 \'f3 show package content c\u7911 a Payload.\
+\uc0\u272 \u7875  xem t\u7845 t c\u7843  c\'e1c framework \u273 \u432 \u7907 c d\'f9ng, ta d\'f9ng c\'e2u l\u7879 nh sau\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs32 \cf2 \expnd0\expndtw0\kerning0
+otool -L app/Payload/App.app/App
+\fs24 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \kerning1\expnd0\expndtw0 S\uc0\u7869  print ra full list c\u7911 a dependencies.\
+Sau \uc0\u273 \'f3 ta m\u7903  folder Frameworks, l\'e0 n\u417 i ch\u7913 a t\u7845 t c\u7843  c\'e1c frameworks \u273 \u432 \u7907 c include v\'e0 t\'ecm xem s\u7921  kh\'e1c bi\u7879 t v\u7899 i danh s\'e1ch \u273 \'e3 \u273 \u432 \u7907 c in ra b\u7857 ng command otool.\
+Khi \uc0\u273 \'e3 t\'ecm th\u7845 y framework \u273 ang b\u7883  miss, ta c\'f3 th\u7875  add n\'f3 v\'e0o App module nh\u432  l\'e0 direct dependency.\
+}
