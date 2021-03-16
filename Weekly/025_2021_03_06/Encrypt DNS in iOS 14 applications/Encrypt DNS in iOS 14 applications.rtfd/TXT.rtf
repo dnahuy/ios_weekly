@@ -1,0 +1,105 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red255\green255\blue255;\red0\green0\blue0;
+\red15\green104\blue160;\red92\green38\blue153;\red196\green26\blue22;\red0\green0\blue0;\red255\green255\blue255;
+\red0\green0\blue0;\red38\green38\blue38;\red11\green79\blue121;\red38\green71\blue75;\red28\green0\blue207;
+\red255\green255\blue255;\red0\green0\blue0;\red63\green110\blue116;\red46\green13\blue110;}
+{\*\expandedcolortbl;;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0;
+\csgenericrgb\c5882\c40784\c62745;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c77000\c10200\c8600;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c0\c0\c0\c70196;\cssrgb\c20000\c20000\c20000;\csgenericrgb\c4314\c30980\c47451;\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c11000\c0\c81000;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0\c70196;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c18100\c5200\c43100;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33100\viewh17880\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://stavrosschizas.com/post/encrypt-dns-in-ios-14-applications/"}}{\fldrslt 
+\f0\fs36 \cf0 https://stavrosschizas.com/post/encrypt-dns-in-ios-14-applications/}}
+\f0\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Introduce
+\f0\b0\fs36 \
+This blog introduce how we can encrypt DNS queries over HTTPS (DoH) or TLS (DoT). So we can prevent unencrypted DNS from eavesdropping.\
+\
+
+\f1\b\fs44 Unencrypted DNS\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs36 \cf0 \
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 let\cf4  \cf5 session\cf4  = \cf6 URLSession\cf4 .init(configuration: config)\
+\cf6 URLSession\cf4 .shared.dataTask(with: url) \{ data, response, error \cf2 in\cf4 \
+    \cf2 guard\cf4  \cf2 let\cf4  data = data, error == \cf2 nil\cf4  \cf2 else\cf4  \{\
+        print(error ?? \cf7 "Unknown error"\cf4 )\
+        \cf2 return\cf4 \
+    \}\
+\
+    \cf2 let\cf4  contents = String(data: data, encoding: .utf8)\
+    print(contents!)\
+    PlaygroundPage.current.finishExecution()\
+\}.resume()\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 And we can use Wireshark to eavesdrop DNS queries.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs44 \cf0 Encrypted DNS using DoH/DoT\
+\pard\pardeftab720\sl532\sa280\partightenfactor0
+
+\f0\b0\fs36 \cf8 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 On iOS 14, to make use of DoH, we need to configure the\'a0NWParameters.PrivacyContext\'a0with a DNS (which supports DoH) resolver\'92s central host HTTPS and its backup hosts IPs.\strokec11 \
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 enum\cf4  \cf12 DoHConfigurarion\cf4 : \cf6 Hashable\cf4  \{\
+    \cf2 case\cf4  \cf5 cloudflare\cf4 \
+    \
+    \cf2 var\cf4  \cf5 httpsURL\cf4 : \cf6 URL\cf4  \{\
+        \cf2 switch\cf4  \cf2 self\cf4  \{\
+        \cf2 case\cf4  .\cf13 cloudflare\cf4 :\
+            \cf2 return\cf4  \cf6 URL\cf4 (string: \cf7 "https://cloudflare-dns.com/dns-query"\cf4 )!\
+        \}\
+    \}\
+    \
+    \cf2 var\cf4  \cf5 serverAddresses\cf4 : [\cf6 NWEndpoint\cf4 ] \{\
+        \cf2 switch\cf4  \cf2 self\cf4  \{\
+        \cf2 case\cf4  .\cf13 cloudflare\cf4 :\
+            \cf2 return\cf4  [\
+                NWEndpoint.hostPort(host: \cf7 "1.1.1.1"\cf4 , port: \cf14 443\cf4 ),\
+                NWEndpoint.hostPort(host: \cf7 "1.0.0.1"\cf4 , port: \cf14 443\cf4 ),\
+                NWEndpoint.hostPort(host: \cf7 "2606:4700:4700::1111"\cf4 , port: \cf14 443\cf4 ),\
+                NWEndpoint.hostPort(host: \cf7 "2606:4700:4700::1001"\cf4 , port: \cf14 443\cf4 )\
+            ]\
+        \}\
+    \}\
+\}\
+\
+\pard\pardeftab720\sl532\sa280\partightenfactor0
+
+\f0\fs36 \cf8 \cb15 \expnd0\expndtw0\kerning0
+Using\
+\pard\tx791\pardeftab791\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \cb3 \kerning1\expnd0\expndtw0 let\cf4  \cf5 secureDNS\cf4  = \cf17 DoHConfigurarion\cf4 .\cf13 cloudflare\cf4 \
+NWParameters.PrivacyContext.default.requireEncryptedNameResolution(\
+    \cf2 true\cf4 ,\
+    fallbackResolver: .https(\cf17 secureDNS\cf4 .httpsURL, serverAddresses: \cf17 secureDNS\cf4 .serverAddresses)\
+)\
+\
+\cf6 URLSession\cf4 .\cf6 shared\cf4 .\cf18 dataTask\cf4 (with: \cf17 url\cf4 ) \{ data, response, error \cf2 in\cf4 \
+    \cf2 guard\cf4  \cf2 let\cf4  data = data, error \cf18 ==\cf4  \cf2 nil\cf4  \cf2 else\cf4  \{\
+        \cf18 print\cf4 (error ?? \cf7 "Unknown error"\cf4 )\
+        \cf2 return\cf4 \
+    \}\
+\
+    \cf2 let\cf4  contents = \cf6 String\cf4 (data: data, encoding: .\cf6 utf8\cf4 )\
+    \cf18 print\cf4 (contents!)\
+    PlaygroundPage.current.finishExecution()\
+\}.\cf18 resume\cf4 ()\
+\pard\pardeftab720\sl532\sa280\partightenfactor0
+\cf4 \
+}
