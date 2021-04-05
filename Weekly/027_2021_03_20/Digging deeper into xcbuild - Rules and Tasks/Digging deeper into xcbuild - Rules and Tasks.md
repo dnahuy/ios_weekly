@@ -34,7 +34,7 @@ ___rule-needs-to-run___, gets a task scheduled for it by the build system. The r
 Look for ___rule-needs-to-run___ and ___CompileSwiftSources___ and find out a module which is triggering rebuilds
 
 ## Using XCLogParser
-Besides build.trace, we can use [XCLogParser](https://asifmohd.github.io/ios/2021/03/11/xcbuild-debug-info.html) to investigate build logs.
+Besides build.trace, we can use [XCLogParser](https://github.com/spotify/XCLogParser) to investigate build logs.
 Example, we can look for modules which are being rebuilt by searching for __fetchedFromCache: false__ in JSON exported from XCLogParser. 
 
 ## Run scripts and input/output file lists
