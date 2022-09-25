@@ -1,84 +1,84 @@
-https://www.bignerdranch.com/blog/it-looks-like-you-are-trying-to-use-a-framework/
-https://pewpewthespells.com/blog/static_and_dynamic_libraries.html
-https://alejandromp.com/blog/the-concepts-behind-iterating/
-https://kean.blog/post/networking-101
-https://blog.alltheflow.com/code-signing-in-your-favor/
-https://blog.alltheflow.com/unexpected-compilation/
-https://andreaslydemann.com/articles/
-https://medium.com/@s1ddok/one-weird-trick-for-development-pod-type-of-experience-using-swift-package-manager-and-xcode-12-4de02d881ec1
-https://www.andyibanez.com/posts/common-reasons-background-tasks-fail-ios/
-https://www.andyibanez.com/posts/writing-commandline-tools-argumentparser-part6/
-https://www.andyibanez.com/posts/intercepting-network-mitmproxy/
-https://medium.com/anysuggestion/introducing-appfolder-704b007bd83b
-https://medium.com/anysuggestion/taking-dependency-injection-one-step-further-with-swift-cde1b3d41d49
-https://www.appsdissected.com/xcode-ios-devicesupport-delete/
-https://appventure.me/guides/keypaths/intro.html
-https://holko.pl/2017/11/08/optimizing-swift-build-times/
-https://holko.pl/2016/10/18/dsym-debug/
-https://holko.pl/2017/06/26/checking-uiviewcontroller-deallocation/
-https://holko.pl/2016/04/26/xcode-search/
-https://jeroenscode.com/debugging-with-network-conditions-using-xcode/
-https://medium.com/@londeix/xcode-file-variants-without-targets-9724cbabe821
-https://medium.com/@londeix/xcode-unit-tests-with-s-13f0deaed501
-https://medium.com/macoclock/automating-continuous-integration-and-continuous-delivery-with-github-actions-f2f4d55beac0
-https://medium.com/flawless-app-stories/optimize-swift-build-and-compile-times-in-xcode-8a212e2e7d86
-https://benoitpasquier.com/tools-tips-to-scale-ios-project-and-team/
-https://benoitpasquier.com/adaptive-layout-collectionview-swift/
-https://benoitpasquier.com/ui-testing-inspect-ios-app/
-https://benoitpasquier.com/ios-webkit-swift-and-javascript/
-http://ioscoachfrank.com/gcd-lies.html
-https://alisoftware.github.io/swift/protocols/2018/09/02/protocols-private-properties/
-https://alisoftware.github.io/swift/closures/2016/07/25/closure-capture-1/
-https://danielgauthier.me/2020/03/03/vctransitions3.html
-https://dasdom.dev/posts/using-breakpoints-to-debug-layout/
-https://rderik.com/blog/resigning-ios-apps-from-an-ipa-for-mobile-security-research/
-https://nachbaur.com/2019/03/22/working-with-multiple-architectures/
-https://nachbaur.com/2019/03/08/cocoa-dynamic-frameworks/
-https://silverhammermba.github.io/blog/2018/08/03/osx-jenkins
-https://www.fivestars.blog/code/swift-subcommands-galore.html
-https://fluffy.es/allow-app-created-in-xcode-11-to-run-on-ios-12-and-lower/
-https://fluffy.es/open-specific-view-push-notification-tapped/
-https://fluffy.es/how-to-debug-app-which-got-launched-push-notification/
-https://fluffy.es/launch-arguments-environment-variables/
-https://fluffy.es/devicecheck-tutorial/
-https://fluffy.es/perform-action-notification-tap/
-https://hesh.am/2019-02-12/swift-5-module-stability-binary-frameworks
-https://blog.kulman.sk/dealing-with-memory-limits-in-app-extensions/
-https://blog.kulman.sk/automating-ios-development-and-distribution-workflow/
-https://landonf.org/code/ios/Radar_15800975_iOS_Frameworks.20140112.html
-https://littlebitesofcocoa.com/308-automatic-layout-to-layout-transitions-with-uicollectionviewcontroller
-https://www.lukecsmith.co.uk/2019/08/28/logging-and-debugging-without-xcode-using-oslog/
-https://cutecoder.org/programming/clean-architecture-viper-sample-project/
-https://maniacdev.com/2017/01/bluepill-open-source-tool-for-ios-testing-in-multiple-simulators-with-added-reliability-features
-https://github.com/dani-gavrilov/GDPerformanceView-Swift
-https://www.avanderlee.com/xcode/launch-screen
-https://curvedlayer.com/2020/08/09/ios-simulator-plugin-simctl.html
-https://martinmitrevski.com/2017/02/12/what-every-great-ios-engineer-needs-to-know-part-2/
-https://martinmitrevski.com/2016/08/27/injecting-code-in-ios-framework-startup/
-https://daringsnowball.net/ios-hacking-5/
-https://www.objc.io/issues/6-build-tools/cocoapods-under-the-hood/
-https://eisel.me/jekyll/update/2020/08/07/signing.html
-https://eisel.me/jekyll/update/2018/11/20/startup.html
-https://miqu.me/blog/2014/11/23/ios-code-injection/
-https://www.raywenderlich.com/2805-demystifying-ios-application-crash-logs
-https://nshint.github.io/blog/2015/06/24/detailed-exceptions/
-https://mgrebenets.github.io/xcode/2019/05/12/xcode-build-settings-in-depth
-https://mgrebenets.github.io/fastlane/2019/04/07/fastlane-for-enterprise
-https://mgrebenets.github.io/xcode/2019/04/04/xcode-build-phases-and-environment
-https://mgrebenets.github.io/mobile%20ci/2015/02/08/mobile-ci-makefiles
-https://ohmyswift.com/blog/2020/01/10/why-should-we-avoid-using-closures-in-swift-structs/
-https://orangejuiceliberationfront.com/how-do-dependency-managers-work/
-https://orangejuiceliberationfront.com/looking-at-my-apps-bitcode/
-https://orangejuiceliberationfront.com/hiding-symbols-in-static-libraries-with-xcode-or-cmake/
-https://www.onswiftwings.com/posts/build-time-optimization-part2/
-https://patrickbalestra.com/blog/2018/08/27/improving-your-build-time-in-xcode-10.html
-https://recoursive.com/2018/06/06/static_libraries_cocoapods/
-https://pewpewthespells.com/blog/convert_static_to_dynamic.html
-https://theswiftdev.com/deep-dive-into-swift-frameworks/
-https://swiftrocks.com/app-attest-apple-protect-ios-jailbreak
-https://www.avanderlee.com/swift/exc-bad-access-crash/
-https://blog.timac.org/2018/1126-deobfuscated-libmobilegestalt-keys-ios-12/
-https://blog.timac.org/2018/1211-analysis-of-the-nest-app-for-ios/
-https://www.vadimbulavin.com/xcode-build-system/
-https://xavierlowmiller.github.io/blog/2018/07/09/SwiftLint-For-Teams
+https://www.bignerdranch.com/blog/it-looks-like-you-are-trying-to-use-a-framework/ \
+https://pewpewthespells.com/blog/static_and_dynamic_libraries.html \
+https://alejandromp.com/blog/the-concepts-behind-iterating/ \
+https://kean.blog/post/networking-101 \
+https://blog.alltheflow.com/code-signing-in-your-favor/ \
+https://blog.alltheflow.com/unexpected-compilation/ \
+https://andreaslydemann.com/articles/ \
+https://medium.com/@s1ddok/one-weird-trick-for-development-pod-type-of-experience-using-swift-package-manager-and-xcode-12-4de02d881ec1 \
+https://www.andyibanez.com/posts/common-reasons-background-tasks-fail-ios/ \
+https://www.andyibanez.com/posts/writing-commandline-tools-argumentparser-part6/ \
+https://www.andyibanez.com/posts/intercepting-network-mitmproxy/ \
+https://medium.com/anysuggestion/introducing-appfolder-704b007bd83b \
+https://medium.com/anysuggestion/taking-dependency-injection-one-step-further-with-swift-cde1b3d41d49 \
+https://www.appsdissected.com/xcode-ios-devicesupport-delete/ \
+https://appventure.me/guides/keypaths/intro.html \
+https://holko.pl/2017/11/08/optimizing-swift-build-times/ \
+https://holko.pl/2016/10/18/dsym-debug/ \
+https://holko.pl/2017/06/26/checking-uiviewcontroller-deallocation/ \
+https://holko.pl/2016/04/26/xcode-search/ \
+https://jeroenscode.com/debugging-with-network-conditions-using-xcode/ \
+https://medium.com/@londeix/xcode-file-variants-without-targets-9724cbabe821 \
+https://medium.com/@londeix/xcode-unit-tests-with-s-13f0deaed501 \
+https://medium.com/macoclock/automating-continuous-integration-and-continuous-delivery-with-github-actions-f2f4d55beac0 \
+https://medium.com/flawless-app-stories/optimize-swift-build-and-compile-times-in-xcode-8a212e2e7d86 \
+https://benoitpasquier.com/tools-tips-to-scale-ios-project-and-team/ \
+https://benoitpasquier.com/adaptive-layout-collectionview-swift/ \
+https://benoitpasquier.com/ui-testing-inspect-ios-app/ \
+https://benoitpasquier.com/ios-webkit-swift-and-javascript/ \
+http://ioscoachfrank.com/gcd-lies.html \
+https://alisoftware.github.io/swift/protocols/2018/09/02/protocols-private-properties/ \
+https://alisoftware.github.io/swift/closures/2016/07/25/closure-capture-1/ \
+https://danielgauthier.me/2020/03/03/vctransitions3.html \
+https://dasdom.dev/posts/using-breakpoints-to-debug-layout/ \
+https://rderik.com/blog/resigning-ios-apps-from-an-ipa-for-mobile-security-research/ \
+https://nachbaur.com/2019/03/22/working-with-multiple-architectures/ \
+https://nachbaur.com/2019/03/08/cocoa-dynamic-frameworks/ \
+https://silverhammermba.github.io/blog/2018/08/03/osx-jenkins \
+https://www.fivestars.blog/code/swift-subcommands-galore.html \
+https://fluffy.es/allow-app-created-in-xcode-11-to-run-on-ios-12-and-lower/ \
+https://fluffy.es/open-specific-view-push-notification-tapped/ \
+https://fluffy.es/how-to-debug-app-which-got-launched-push-notification/ \
+https://fluffy.es/launch-arguments-environment-variables/ \
+https://fluffy.es/devicecheck-tutorial/ \
+https://fluffy.es/perform-action-notification-tap/ \
+https://hesh.am/2019-02-12/swift-5-module-stability-binary-frameworks \
+https://blog.kulman.sk/dealing-with-memory-limits-in-app-extensions/ \
+https://blog.kulman.sk/automating-ios-development-and-distribution-workflow/ \
+https://landonf.org/code/ios/Radar_15800975_iOS_Frameworks.20140112.html \
+https://littlebitesofcocoa.com/308-automatic-layout-to-layout-transitions-with-uicollectionviewcontroller \
+https://www.lukecsmith.co.uk/2019/08/28/logging-and-debugging-without-xcode-using-oslog/ \
+https://cutecoder.org/programming/clean-architecture-viper-sample-project/ \
+https://maniacdev.com/2017/01/bluepill-open-source-tool-for-ios-testing-in-multiple-simulators-with-added-reliability-features \
+https://github.com/dani-gavrilov/GDPerformanceView-Swift \
+https://www.avanderlee.com/xcode/launch-screen \
+https://curvedlayer.com/2020/08/09/ios-simulator-plugin-simctl.html \
+https://martinmitrevski.com/2017/02/12/what-every-great-ios-engineer-needs-to-know-part-2/ \
+https://martinmitrevski.com/2016/08/27/injecting-code-in-ios-framework-startup/ \
+https://daringsnowball.net/ios-hacking-5/ \
+https://www.objc.io/issues/6-build-tools/cocoapods-under-the-hood/ \
+https://eisel.me/jekyll/update/2020/08/07/signing.html \
+https://eisel.me/jekyll/update/2018/11/20/startup.html \
+https://miqu.me/blog/2014/11/23/ios-code-injection/ \
+https://www.raywenderlich.com/2805-demystifying-ios-application-crash-logs \
+https://nshint.github.io/blog/2015/06/24/detailed-exceptions/ \
+https://mgrebenets.github.io/xcode/2019/05/12/xcode-build-settings-in-depth \
+https://mgrebenets.github.io/fastlane/2019/04/07/fastlane-for-enterprise \
+https://mgrebenets.github.io/xcode/2019/04/04/xcode-build-phases-and-environment \
+https://mgrebenets.github.io/mobile%20ci/2015/02/08/mobile-ci-makefiles \
+https://ohmyswift.com/blog/2020/01/10/why-should-we-avoid-using-closures-in-swift-structs/ \
+https://orangejuiceliberationfront.com/how-do-dependency-managers-work/ \
+https://orangejuiceliberationfront.com/looking-at-my-apps-bitcode/ \
+https://orangejuiceliberationfront.com/hiding-symbols-in-static-libraries-with-xcode-or-cmake/ \
+https://www.onswiftwings.com/posts/build-time-optimization-part2/ \
+https://patrickbalestra.com/blog/2018/08/27/improving-your-build-time-in-xcode-10.html \
+https://recoursive.com/2018/06/06/static_libraries_cocoapods/ \
+https://pewpewthespells.com/blog/convert_static_to_dynamic.html \
+https://theswiftdev.com/deep-dive-into-swift-frameworks/ \
+https://swiftrocks.com/app-attest-apple-protect-ios-jailbreak \
+https://www.avanderlee.com/swift/exc-bad-access-crash/ \
+https://blog.timac.org/2018/1126-deobfuscated-libmobilegestalt-keys-ios-12/ \
+https://blog.timac.org/2018/1211-analysis-of-the-nest-app-for-ios/ \
+https://www.vadimbulavin.com/xcode-build-system/ \
+https://xavierlowmiller.github.io/blog/2018/07/09/SwiftLint-For-Teams \
 https://blog.kulman.sk/determining-which-frameworks-use-uiwebview/
