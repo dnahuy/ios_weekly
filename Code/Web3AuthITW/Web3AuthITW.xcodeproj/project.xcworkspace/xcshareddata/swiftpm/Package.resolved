@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "keyboardkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/KeyboardKit/KeyboardKit",
+      "state" : {
+        "revision" : "341227f77cade78806562d1ea3e86d52113bfc45",
+        "version" : "8.5.1"
+      }
+    },
+    {
+      "identity" : "whisper.cpp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ggerganov/whisper.cpp",
+      "state" : {
+        "branch" : "master",
+        "revision" : "b0c3cbf2e851cf232e432b590dcc514a689ec028"
+      }
+    }
+  ],
+  "version" : 2
+}

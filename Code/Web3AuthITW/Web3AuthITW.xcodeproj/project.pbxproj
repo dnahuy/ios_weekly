@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8429066E2BD269B5009C9274 /* whisper in Frameworks */ = {isa = PBXBuildFile; productRef = 8429066D2BD269B5009C9274 /* whisper */; };
+		842906702BD269C6009C9274 /* whisper in Frameworks */ = {isa = PBXBuildFile; productRef = 8429066F2BD269C6009C9274 /* whisper */; };
+		842906742BD27BFB009C9274 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842906722BD27BFB009C9274 /* Recorder.swift */; };
+		842906762BD27BFB009C9274 /* RiffWaveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842906732BD27BFB009C9274 /* RiffWaveUtils.swift */; };
+		844BF3302BD39EF9009C2EBD /* samples in Resources */ = {isa = PBXBuildFile; fileRef = 844BF32F2BD39EF9009C2EBD /* samples */; };
+		844BF3312BD39EF9009C2EBD /* samples in Resources */ = {isa = PBXBuildFile; fileRef = 844BF32F2BD39EF9009C2EBD /* samples */; };
+		844BF3362BD3B46B009C2EBD /* models in Resources */ = {isa = PBXBuildFile; fileRef = 844BF3352BD3B46B009C2EBD /* models */; };
+		844BF3372BD3B46B009C2EBD /* models in Resources */ = {isa = PBXBuildFile; fileRef = 844BF3352BD3B46B009C2EBD /* models */; };
+		844BF3412BD3EED0009C2EBD /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF33F2BD3EED0009C2EBD /* LibWhisper.swift */; };
+		844BF3422BD3EED0009C2EBD /* WhisperState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF3402BD3EED0009C2EBD /* WhisperState.swift */; };
+		844BF34A2BD3F01D009C2EBD /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF3492BD3F01D009C2EBD /* PersistentStore.swift */; };
+		848307182BD4AD20004D0EF9 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 848307172BD4AD20004D0EF9 /* KeyboardKit */; };
+		848307192BD4AEBA004D0EF9 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF3492BD3F01D009C2EBD /* PersistentStore.swift */; };
+		8483071D2BD4B26F004D0EF9 /* ExtensionNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483071B2BD4B1EA004D0EF9 /* ExtensionNavigator.swift */; };
+		848307212BD4B311004D0EF9 /* ContainerNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848307202BD4B311004D0EF9 /* ContainerNavigator.swift */; };
+		848307262BD509C4004D0EF9 /* RecognitionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848307252BD509C4004D0EF9 /* RecognitionEngine.swift */; };
+		84D5F7592BD13106000F572C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5F7582BD13106000F572C /* AppDelegate.swift */; };
+		84D5F75B2BD13106000F572C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5F75A2BD13106000F572C /* SceneDelegate.swift */; };
+		84D5F75D2BD13106000F572C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5F75C2BD13106000F572C /* ViewController.swift */; };
+		84D5F7602BD13106000F572C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D5F75E2BD13106000F572C /* Main.storyboard */; };
+		84D5F7632BD13106000F572C /* Web3AuthITW.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D5F7612BD13106000F572C /* Web3AuthITW.xcdatamodeld */; };
+		84D5F7652BD13107000F572C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D5F7642BD13107000F572C /* Assets.xcassets */; };
+		84D5F7682BD13107000F572C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D5F7662BD13107000F572C /* LaunchScreen.storyboard */; };
+		84D5F7762BD13139000F572C /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D5F7752BD13139000F572C /* KeyboardViewController.swift */; };
+		84D5F77A2BD13139000F572C /* WhisperKeyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 84D5F7732BD13138000F572C /* WhisperKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84D5F7782BD13139000F572C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84D5F74D2BD13106000F572C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84D5F7722BD13138000F572C;
+			remoteInfo = WhisperKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84D5F77E2BD13139000F572C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84D5F77A2BD13139000F572C /* WhisperKeyboard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		842906722BD27BFB009C9274 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		842906732BD27BFB009C9274 /* RiffWaveUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiffWaveUtils.swift; sourceTree = "<group>"; };
+		844BF32F2BD39EF9009C2EBD /* samples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = samples; sourceTree = "<group>"; };
+		844BF3332BD3AEAC009C2EBD /* Web3AuthITW.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Web3AuthITW.entitlements; sourceTree = "<group>"; };
+		844BF3342BD3AEB8009C2EBD /* WhisperKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhisperKeyboard.entitlements; sourceTree = "<group>"; };
+		844BF3352BD3B46B009C2EBD /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
+		844BF33F2BD3EED0009C2EBD /* LibWhisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibWhisper.swift; sourceTree = "<group>"; };
+		844BF3402BD3EED0009C2EBD /* WhisperState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperState.swift; sourceTree = "<group>"; };
+		844BF3492BD3F01D009C2EBD /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		8483071B2BD4B1EA004D0EF9 /* ExtensionNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNavigator.swift; sourceTree = "<group>"; };
+		848307202BD4B311004D0EF9 /* ContainerNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerNavigator.swift; sourceTree = "<group>"; };
+		848307252BD509C4004D0EF9 /* RecognitionEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionEngine.swift; sourceTree = "<group>"; };
+		84D5F7552BD13106000F572C /* Web3AuthITW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Web3AuthITW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D5F7582BD13106000F572C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84D5F75A2BD13106000F572C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84D5F75C2BD13106000F572C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84D5F75F2BD13106000F572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84D5F7622BD13106000F572C /* Web3AuthITW.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Web3AuthITW.xcdatamodel; sourceTree = "<group>"; };
+		84D5F7642BD13107000F572C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84D5F7672BD13107000F572C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84D5F7692BD13107000F572C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D5F7732BD13138000F572C /* WhisperKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WhisperKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D5F7752BD13139000F572C /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		84D5F7772BD13139000F572C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84D5F7522BD13106000F572C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842906702BD269C6009C9274 /* whisper in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D5F7702BD13138000F572C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848307182BD4AD20004D0EF9 /* KeyboardKit in Frameworks */,
+				8429066E2BD269B5009C9274 /* whisper in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		842906712BD27BFB009C9274 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				842906722BD27BFB009C9274 /* Recorder.swift */,
+				842906732BD27BFB009C9274 /* RiffWaveUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		844BF3262BD399DF009C2EBD /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				844BF33E2BD3EED0009C2EBD /* Whisper */,
+				848307252BD509C4004D0EF9 /* RecognitionEngine.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		844BF33B2BD3EE2D009C2EBD /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				844BF3492BD3F01D009C2EBD /* PersistentStore.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		844BF33E2BD3EED0009C2EBD /* Whisper */ = {
+			isa = PBXGroup;
+			children = (
+				844BF33F2BD3EED0009C2EBD /* LibWhisper.swift */,
+				844BF3402BD3EED0009C2EBD /* WhisperState.swift */,
+			);
+			path = Whisper;
+			sourceTree = "<group>";
+		};
+		844BF3462BD3EFCB009C2EBD /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				8483071B2BD4B1EA004D0EF9 /* ExtensionNavigator.swift */,
+				848307202BD4B311004D0EF9 /* ContainerNavigator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		84D5F74C2BD13106000F572C = {
+			isa = PBXGroup;
+			children = (
+				84D5F7572BD13106000F572C /* Web3AuthITW */,
+				84D5F7742BD13139000F572C /* WhisperKeyboard */,
+				84D5F7562BD13106000F572C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84D5F7562BD13106000F572C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84D5F7552BD13106000F572C /* Web3AuthITW.app */,
+				84D5F7732BD13138000F572C /* WhisperKeyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84D5F7572BD13106000F572C /* Web3AuthITW */ = {
+			isa = PBXGroup;
+			children = (
+				844BF3332BD3AEAC009C2EBD /* Web3AuthITW.entitlements */,
+				844BF3352BD3B46B009C2EBD /* models */,
+				844BF32F2BD39EF9009C2EBD /* samples */,
+				844BF3262BD399DF009C2EBD /* Engine */,
+				842906712BD27BFB009C9274 /* Utils */,
+				844BF33B2BD3EE2D009C2EBD /* Storage */,
+				844BF3462BD3EFCB009C2EBD /* Navigation */,
+				84D5F7582BD13106000F572C /* AppDelegate.swift */,
+				84D5F75A2BD13106000F572C /* SceneDelegate.swift */,
+				84D5F75C2BD13106000F572C /* ViewController.swift */,
+				84D5F75E2BD13106000F572C /* Main.storyboard */,
+				84D5F7642BD13107000F572C /* Assets.xcassets */,
+				84D5F7662BD13107000F572C /* LaunchScreen.storyboard */,
+				84D5F7692BD13107000F572C /* Info.plist */,
+				84D5F7612BD13106000F572C /* Web3AuthITW.xcdatamodeld */,
+			);
+			path = Web3AuthITW;
+			sourceTree = "<group>";
+		};
+		84D5F7742BD13139000F572C /* WhisperKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				844BF3342BD3AEB8009C2EBD /* WhisperKeyboard.entitlements */,
+				84D5F7752BD13139000F572C /* KeyboardViewController.swift */,
+				84D5F7772BD13139000F572C /* Info.plist */,
+			);
+			path = WhisperKeyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84D5F7542BD13106000F572C /* Web3AuthITW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D5F76C2BD13107000F572C /* Build configuration list for PBXNativeTarget "Web3AuthITW" */;
+			buildPhases = (
+				84D5F7512BD13106000F572C /* Sources */,
+				84D5F7522BD13106000F572C /* Frameworks */,
+				84D5F7532BD13106000F572C /* Resources */,
+				84D5F77E2BD13139000F572C /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84D5F7792BD13139000F572C /* PBXTargetDependency */,
+			);
+			name = Web3AuthITW;
+			packageProductDependencies = (
+				8429066F2BD269C6009C9274 /* whisper */,
+			);
+			productName = Web3AuthITW;
+			productReference = 84D5F7552BD13106000F572C /* Web3AuthITW.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84D5F7722BD13138000F572C /* WhisperKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D5F77B2BD13139000F572C /* Build configuration list for PBXNativeTarget "WhisperKeyboard" */;
+			buildPhases = (
+				84D5F76F2BD13138000F572C /* Sources */,
+				84D5F7702BD13138000F572C /* Frameworks */,
+				84D5F7712BD13138000F572C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhisperKeyboard;
+			packageProductDependencies = (
+				8429066D2BD269B5009C9274 /* whisper */,
+				848307172BD4AD20004D0EF9 /* KeyboardKit */,
+			);
+			productName = WhisperKeyboard;
+			productReference = 84D5F7732BD13138000F572C /* WhisperKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84D5F74D2BD13106000F572C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					84D5F7542BD13106000F572C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					84D5F7722BD13138000F572C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 84D5F7502BD13106000F572C /* Build configuration list for PBXProject "Web3AuthITW" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84D5F74C2BD13106000F572C;
+			packageReferences = (
+				8429066C2BD269B5009C9274 /* XCRemoteSwiftPackageReference "whisper" */,
+				848307162BD4AD20004D0EF9 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+			);
+			productRefGroup = 84D5F7562BD13106000F572C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84D5F7542BD13106000F572C /* Web3AuthITW */,
+				84D5F7722BD13138000F572C /* WhisperKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84D5F7532BD13106000F572C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844BF3362BD3B46B009C2EBD /* models in Resources */,
+				84D5F7682BD13107000F572C /* LaunchScreen.storyboard in Resources */,
+				84D5F7652BD13107000F572C /* Assets.xcassets in Resources */,
+				844BF3302BD39EF9009C2EBD /* samples in Resources */,
+				84D5F7602BD13106000F572C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D5F7712BD13138000F572C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844BF3372BD3B46B009C2EBD /* models in Resources */,
+				844BF3312BD39EF9009C2EBD /* samples in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84D5F7512BD13106000F572C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842906762BD27BFB009C9274 /* RiffWaveUtils.swift in Sources */,
+				84D5F75D2BD13106000F572C /* ViewController.swift in Sources */,
+				84D5F7592BD13106000F572C /* AppDelegate.swift in Sources */,
+				848307262BD509C4004D0EF9 /* RecognitionEngine.swift in Sources */,
+				84D5F75B2BD13106000F572C /* SceneDelegate.swift in Sources */,
+				844BF3412BD3EED0009C2EBD /* LibWhisper.swift in Sources */,
+				842906742BD27BFB009C9274 /* Recorder.swift in Sources */,
+				84D5F7632BD13106000F572C /* Web3AuthITW.xcdatamodeld in Sources */,
+				848307212BD4B311004D0EF9 /* ContainerNavigator.swift in Sources */,
+				844BF34A2BD3F01D009C2EBD /* PersistentStore.swift in Sources */,
+				844BF3422BD3EED0009C2EBD /* WhisperState.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D5F76F2BD13138000F572C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848307192BD4AEBA004D0EF9 /* PersistentStore.swift in Sources */,
+				8483071D2BD4B26F004D0EF9 /* ExtensionNavigator.swift in Sources */,
+				84D5F7762BD13139000F572C /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84D5F7792BD13139000F572C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84D5F7722BD13138000F572C /* WhisperKeyboard */;
+			targetProxy = 84D5F7782BD13139000F572C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84D5F75E2BD13106000F572C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D5F75F2BD13106000F572C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84D5F7662BD13107000F572C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D5F7672BD13107000F572C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84D5F76A2BD13107000F572C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84D5F76B2BD13107000F572C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84D5F76D2BD13107000F572C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Web3AuthITW/Web3AuthITW.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XU2ZW85439;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Web3AuthITW/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnahuy.Web3AuthITW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84D5F76E2BD13107000F572C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Web3AuthITW/Web3AuthITW.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XU2ZW85439;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Web3AuthITW/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnahuy.Web3AuthITW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84D5F77C2BD13139000F572C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WhisperKeyboard/WhisperKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XU2ZW85439;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhisperKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WhisperKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnahuy.Web3AuthITW.WhisperKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84D5F77D2BD13139000F572C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WhisperKeyboard/WhisperKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XU2ZW85439;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhisperKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WhisperKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnahuy.Web3AuthITW.WhisperKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84D5F7502BD13106000F572C /* Build configuration list for PBXProject "Web3AuthITW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D5F76A2BD13107000F572C /* Debug */,
+				84D5F76B2BD13107000F572C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84D5F76C2BD13107000F572C /* Build configuration list for PBXNativeTarget "Web3AuthITW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D5F76D2BD13107000F572C /* Debug */,
+				84D5F76E2BD13107000F572C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84D5F77B2BD13139000F572C /* Build configuration list for PBXNativeTarget "WhisperKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D5F77C2BD13139000F572C /* Debug */,
+				84D5F77D2BD13139000F572C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8429066C2BD269B5009C9274 /* XCRemoteSwiftPackageReference "whisper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ggerganov/whisper.cpp";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		848307162BD4AD20004D0EF9 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8429066D2BD269B5009C9274 /* whisper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8429066C2BD269B5009C9274 /* XCRemoteSwiftPackageReference "whisper" */;
+			productName = whisper;
+		};
+		8429066F2BD269C6009C9274 /* whisper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8429066C2BD269B5009C9274 /* XCRemoteSwiftPackageReference "whisper" */;
+			productName = whisper;
+		};
+		848307172BD4AD20004D0EF9 /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 848307162BD4AD20004D0EF9 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		84D5F7612BD13106000F572C /* Web3AuthITW.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84D5F7622BD13106000F572C /* Web3AuthITW.xcdatamodel */,
+			);
+			currentVersion = 84D5F7622BD13106000F572C /* Web3AuthITW.xcdatamodel */;
+			path = Web3AuthITW.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 84D5F74D2BD13106000F572C /* Project object */;
+}
